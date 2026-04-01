@@ -1435,6 +1435,228 @@
     .hero { padding: 20px 16px 0; }
     .overview-grid { padding: 0 16px 50px; }
   }
+  /* TEAM DYNAMIK PAGE */
+  .td-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px;
+    border-radius: 20px; margin-bottom: 20px;
+    background: rgba(52,211,153,0.1); color: var(--accent-teal);
+    border: 1px solid rgba(52,211,153,0.22);
+  }
+  .td-section-title {
+    font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin: 36px 0 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .td-section-title::before { content: ''; width: 20px; height: 2px; border-radius: 1px; }
+  .td-section-title.lencioni { color: var(--phase1); }
+  .td-section-title.lencioni::before { background: var(--phase1); }
+  .td-section-title.edmondson { color: var(--accent-teal); }
+  .td-section-title.edmondson::before { background: var(--accent-teal); }
+  .td-section-title.praxis { color: var(--accent-amber); }
+  .td-section-title.praxis::before { background: var(--accent-amber); }
+  .lencioni-pyramid-wrap { margin: 0 0 28px; position: relative; }
+  .lencioni-pyramid { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 0 auto; width: 100%; max-width: 560px; }
+  .lp-layer { cursor: pointer; transition: filter 0.2s, transform 0.15s; width: 100%; position: relative; }
+  .lp-layer:hover { filter: brightness(1.12); transform: translateY(-1px); }
+  .lp-layer.active .lp-bar { border-color: rgba(255,255,255,0.35) !important; }
+  .lp-bar { display: flex; align-items: center; justify-content: space-between; padding: 13px 20px; border-radius: 8px; border: 1px solid transparent; margin-bottom: 3px; transition: border-color 0.2s; }
+  .lp-left { display: flex; align-items: center; gap: 14px; }
+  .lp-num { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: rgba(255,255,255,0.9); background: rgba(0,0,0,0.2); }
+  .lp-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #fff; }
+  .lp-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+  .lp-chevron { font-size: 11px; color: rgba(255,255,255,0.6); transition: transform 0.2s; flex-shrink: 0; }
+  .lp-layer.active .lp-chevron { transform: rotate(180deg); }
+  .lp-detail { display: none; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 4px; animation: fadeIn 0.2s ease; }
+  .lp-layer.active .lp-detail { display: block; }
+  .lp-detail-text { font-size: 13.5px; line-height: 1.72; color: rgba(232,234,240,0.75); margin-bottom: 10px; }
+  .lp-detail-text strong { color: var(--text); font-weight: 500; }
+  .lp-detail-tip { font-size: 12.5px; line-height: 1.6; padding: 10px 14px; border-radius: 8px; border-left: 3px solid; }
+  .lp-5 .lp-bar { background: linear-gradient(135deg, rgba(248,113,113,0.28), rgba(248,113,113,0.15)); border-color: rgba(248,113,113,0.3); }
+  .lp-4 .lp-bar { background: linear-gradient(135deg, rgba(251,146,60,0.25), rgba(251,146,60,0.12)); border-color: rgba(251,146,60,0.28); }
+  .lp-3 .lp-bar { background: linear-gradient(135deg, rgba(251,191,36,0.22), rgba(251,191,36,0.1)); border-color: rgba(251,191,36,0.28); }
+  .lp-2 .lp-bar { background: linear-gradient(135deg, rgba(52,211,153,0.2), rgba(52,211,153,0.08)); border-color: rgba(52,211,153,0.25); }
+  .lp-1 .lp-bar { background: linear-gradient(135deg, rgba(139,124,248,0.25), rgba(139,124,248,0.12)); border-color: rgba(139,124,248,0.3); }
+  .lp-5 .lp-detail-tip { background: rgba(248,113,113,0.07); border-color: var(--phase3); color: rgba(248,113,113,0.85); }
+  .lp-4 .lp-detail-tip { background: rgba(251,146,60,0.07); border-color: rgba(251,146,60,0.5); color: rgba(251,146,60,0.85); }
+  .lp-3 .lp-detail-tip { background: rgba(251,191,36,0.07); border-color: var(--accent-amber); color: rgba(251,191,36,0.85); }
+  .lp-2 .lp-detail-tip { background: rgba(52,211,153,0.07); border-color: var(--accent-teal); color: rgba(52,211,153,0.85); }
+  .lp-1 .lp-detail-tip { background: rgba(139,124,248,0.07); border-color: var(--phase1); color: rgba(139,124,248,0.9); }
+  .ed-stages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  @media (max-width: 640px) { .ed-stages-grid { grid-template-columns: 1fr; } }
+  .ed-stage { border-radius: 12px; padding: 18px 20px; transition: transform 0.15s, border-color 0.2s; }
+  .ed-stage:hover { transform: translateY(-2px); }
+  .ed-stage-num { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .ed-stage-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .ed-stage-question { font-size: 12.5px; color: var(--muted); margin-bottom: 10px; font-style: italic; }
+  .ed-stage-risk { font-size: 11.5px; padding: 6px 10px; border-radius: 6px; display: inline-block; font-weight: 500; }
+  .ed-1 { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.22); }
+  .ed-1 .ed-stage-num { color: var(--phase3); }
+  .ed-1 .ed-stage-risk { background: rgba(248,113,113,0.1); color: var(--phase3); }
+  .ed-2 { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.22); }
+  .ed-2 .ed-stage-num { color: var(--accent-amber); }
+  .ed-2 .ed-stage-risk { background: rgba(251,191,36,0.1); color: var(--accent-amber); }
+  .ed-3 { background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); }
+  .ed-3 .ed-stage-num { color: var(--accent-teal); }
+  .ed-3 .ed-stage-risk { background: rgba(52,211,153,0.1); color: var(--accent-teal); }
+  .ed-4 { background: rgba(139,124,248,0.08); border: 1px solid rgba(139,124,248,0.22); }
+  .ed-4 .ed-stage-num { color: var(--phase1); }
+  .ed-4 .ed-stage-risk { background: rgba(139,124,248,0.1); color: var(--phase1); }
+  .ps-hebel-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  .ps-hebel-table th { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .ps-hebel-table td { font-size: 13px; line-height: 1.6; color: rgba(232,234,240,0.75); padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+  .ps-hebel-table td strong { color: var(--text); font-weight: 500; }
+  .ps-hebel-table tr:last-child td { border-bottom: none; }
+  .ps-hebel-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .ps-skala-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .ps-skala-item:last-child { border-bottom: none; }
+  .ps-skala-num { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; width: 24px; height: 24px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(52,211,153,0.12); color: var(--accent-teal); }
+  .ps-skala-text { font-size: 13.5px; line-height: 1.6; color: rgba(232,234,240,0.75); }
+  .fehler-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  @media (max-width: 600px) { .fehler-grid { grid-template-columns: 1fr; } }
+  .fehler-card { background: var(--surface2); border: 1px solid rgba(248,113,113,0.15); border-radius: 10px; padding: 14px 16px; }
+  .fehler-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: var(--phase3); margin-bottom: 6px; }
+  .fehler-text { font-size: 12.5px; line-height: 1.6; color: rgba(232,234,240,0.65); }
+
+  /* LIBERATING STRUCTURES — complete redesign */
+  .ls-badge { display:inline-flex;align-items:center;gap:6px;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:20px;background:rgba(167,139,250,0.1);color:#a78bfa;border:1px solid rgba(167,139,250,0.22); }
+
+  /* --- Sort & Filter bar --- */
+  .ls-controls { display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center; }
+  .ls-sort-label { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);flex-shrink:0; }
+  .ls-ctrl-btn { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s; }
+  .ls-ctrl-btn:hover { border-color:var(--border-active);color:var(--text); }
+  .ls-ctrl-btn.active { background:rgba(167,139,250,0.12);border-color:rgba(167,139,250,0.3);color:#a78bfa; }
+  .ls-ctrl-btn.sort-active { background:rgba(251,191,36,0.1);border-color:rgba(251,191,36,0.3);color:var(--accent-amber); }
+  .ls-ctrl-divider { width:1px;height:18px;background:var(--border);flex-shrink:0; }
+  .ls-search { background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text);outline:none;transition:border-color 0.15s;width:160px; }
+  .ls-search::placeholder { color:var(--muted); }
+  .ls-search:focus { border-color:rgba(167,139,250,0.5); }
+
+  /* --- Category label --- */
+  .ls-cat-label { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;display:flex;align-items:center;gap:8px; }
+  .ls-cat-label::before { content:'';width:16px;height:1px;background:currentColor; }
+
+  /* --- Tile grid --- */
+  .ls-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px;margin-bottom:4px; }
+  @media(max-width:600px) { .ls-grid { grid-template-columns:1fr 1fr; } }
+  .ls-tile { background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 14px;cursor:pointer;transition:border-color 0.15s,background 0.15s;position:relative;overflow:hidden; }
+  .ls-tile:hover { border-color:var(--border-active);background:var(--surface2); }
+  .ls-tile.sel { border-color:#a78bfa;background:rgba(167,139,250,0.08); }
+  .ls-tile.mm-hl { border-color:rgba(52,211,153,0.45);background:rgba(52,211,153,0.06); }
+  .ls-tile-bar { position:absolute;top:0;left:0;right:0;height:2px; }
+  .ls-tile-starter .ls-tile-bar { background:var(--accent-teal); }
+  .ls-tile-discovery .ls-tile-bar { background:var(--phase1); }
+  .ls-tile-decision .ls-tile-bar { background:var(--accent-amber); }
+  .ls-tile-peer .ls-tile-bar { background:var(--phase3); }
+  .ls-tile-empathy .ls-tile-bar { background:#f472b6; }
+  .ls-tile-strategy .ls-tile-bar { background:#60a5fa; }
+  .ls-tile-complex .ls-tile-bar { background:var(--muted); }
+  .ls-tile-num { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--muted);margin-bottom:5px; }
+  .ls-tile-name { font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:4px; }
+  .ls-tile.sel .ls-tile-name { color:#a78bfa; }
+  .ls-tile.mm-hl .ls-tile-name { color:var(--accent-teal); }
+  .ls-tile-tag { font-size:11px;color:var(--muted);line-height:1.4; }
+  .ls-tile.hidden { display:none; }
+
+  /* --- Full inline guide (replaces old detail panel) --- */
+  .ls-guide { background:var(--surface2);border:1px solid rgba(167,139,250,0.3);border-radius:14px;padding:0;margin-top:10px;display:none;animation:fadeIn 0.22s ease;overflow:hidden; }
+  .ls-guide.open { display:block; }
+  .ls-guide-head { padding:18px 22px 14px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:14px; }
+  .ls-guide-n { font-family:'Syne',sans-serif;font-size:13px;font-weight:800;width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(167,139,250,0.15);color:#a78bfa; }
+  .ls-guide-title { font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--text);flex:1; }
+  .ls-guide-meta { display:flex;gap:7px;flex-wrap:wrap;margin-top:6px; }
+  .ls-guide-pill { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--muted); }
+  .ls-guide-close { font-size:16px;color:var(--muted);cursor:pointer;flex-shrink:0;padding:2px 6px;border-radius:6px;transition:background 0.15s; }
+  .ls-guide-close:hover { background:rgba(255,255,255,0.08);color:var(--text); }
+  .ls-guide-body { padding:18px 22px 22px; }
+  .ls-guide-section { margin-bottom:18px; }
+  .ls-guide-section:last-child { margin-bottom:0; }
+  .ls-guide-sec-label { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px; }
+  .ls-guide-sec-label::before { content:'';width:14px;height:1px;background:currentColor; }
+  .ls-guide-text { font-size:13.5px;line-height:1.78;color:rgba(232,234,240,0.75); }
+  .ls-guide-text strong { color:var(--text);font-weight:500; }
+  .ls-guide-steps { list-style:none;padding:0; }
+  .ls-guide-step { display:flex;gap:12px;margin-bottom:9px;font-size:13px;line-height:1.6;color:rgba(232,234,240,0.72); }
+  .ls-guide-step-n { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:6px;background:rgba(167,139,250,0.12);color:#a78bfa;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px; }
+  .ls-guide-tips { display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+  @media(max-width:600px) { .ls-guide-tips { grid-template-columns:1fr; } }
+  .ls-guide-tip { background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.15);border-radius:9px;padding:10px 13px;font-size:12.5px;line-height:1.6;color:rgba(52,211,153,0.85); }
+  .ls-guide-trap { background:rgba(248,113,113,0.05);border:1px solid rgba(248,113,113,0.15);border-radius:9px;padding:10px 13px;font-size:12.5px;line-height:1.6;color:rgba(248,113,113,0.8); }
+  .ls-guide-link { display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#a78bfa;text-decoration:none;background:rgba(167,139,250,0.07);border:1px solid rgba(167,139,250,0.18);padding:5px 12px;border-radius:20px;transition:all 0.15s;margin-top:4px; }
+  .ls-guide-link:hover { background:rgba(167,139,250,0.14); }
+
+  /* --- Tools section: tabs --- */
+  .ls-tools-section { margin-top:36px; }
+  .ls-accordion { border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:0; }
+  .ls-acc-header { display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;background:var(--surface);transition:background 0.15s;border-bottom:1px solid var(--border);user-select:none; }
+  .ls-acc-header:last-of-type { border-bottom:none; }
+  .ls-acc-header:hover { background:var(--surface2); }
+  .ls-acc-header.open { background:rgba(167,139,250,0.07);border-bottom:1px solid rgba(167,139,250,0.2); }
+  .ls-acc-title { font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted); }
+  .ls-acc-header.open .ls-acc-title { color:#a78bfa; }
+  .ls-acc-chevron { font-size:11px;color:var(--muted);transition:transform 0.2s; }
+  .ls-acc-header.open .ls-acc-chevron { transform:rotate(180deg);color:#a78bfa; }
+  .ls-acc-body { display:none;padding:20px 18px;border-bottom:1px solid var(--border);animation:fadeIn 0.2s ease; }
+  .ls-acc-body.open { display:block; }
+  .ls-acc-body:last-child { border-bottom:none; }
+
+  /* --- Decision Tree (inside tab) --- */
+  .ls-dt-intro { background:rgba(167,139,250,0.06);border:1px solid rgba(167,139,250,0.18);border-radius:12px;padding:16px 20px;margin-bottom:18px;font-size:13.5px;line-height:1.75;color:rgba(232,234,240,0.72); }
+  .ls-dt-intro strong { color:var(--text);font-weight:500; }
+  .ls-dt-scenarios { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px; }
+  @media(max-width:560px) { .ls-dt-scenarios { grid-template-columns:1fr; } }
+  .ls-dt-btn { background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;cursor:pointer;transition:all 0.15s;text-align:left; }
+  .ls-dt-btn:hover { border-color:var(--border-active); }
+  .ls-dt-btn.active { border-color:#a78bfa;background:rgba(167,139,250,0.08); }
+  .ls-dt-btn-icon { font-size:17px;margin-bottom:6px; }
+  .ls-dt-btn-title { font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px; }
+  .ls-dt-btn-sub { font-size:11px;color:var(--muted);line-height:1.4; }
+  .ls-dt-result { display:none; }
+  .ls-dt-result.open { display:block;animation:fadeIn 0.25s ease; }
+  .ls-dt-context { font-size:13px;line-height:1.72;color:rgba(232,234,240,0.72);background:var(--surface2);border-radius:10px;padding:13px 17px;margin-bottom:14px; }
+  .ls-dt-context strong { color:var(--text);font-weight:500; }
+  .ls-dt-method-cards { display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px; }
+  @media(max-width:560px) { .ls-dt-method-cards { grid-template-columns:1fr; } }
+  .ls-dt-mc { background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:13px 15px;cursor:pointer;transition:border-color 0.15s; }
+  .ls-dt-mc:hover { border-color:var(--border-active); }
+  .ls-dt-mc-rank { font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px; }
+  .ls-dt-mc-name { font-family:'Syne',sans-serif;font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:4px; }
+  .ls-dt-mc-why { font-size:12px;line-height:1.6;color:rgba(232,234,240,0.62); }
+  .ls-dt-mc-why strong { color:var(--text);font-weight:500; }
+  .ls-dt-mc.prime { border-color:rgba(167,139,250,0.35);background:rgba(167,139,250,0.06); }
+  .ls-dt-mc.prime .ls-dt-mc-rank { color:#a78bfa; }
+  .ls-dt-mc.prime .ls-dt-mc-name { color:#a78bfa; }
+  .ls-dt-sequence { display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--border); }
+  .ls-dt-seq-label { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);flex-shrink:0; }
+  .ls-dt-seq-step { font-size:11.5px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:7px;padding:3px 9px;color:rgba(232,234,240,0.65); }
+  .ls-dt-seq-arrow { color:var(--muted);font-size:11px; }
+
+  /* --- Matchmaker (inside tab) --- */
+  .ls-mm-intro { font-size:13.5px;line-height:1.75;color:rgba(232,234,240,0.72);margin-bottom:14px; }
+  .ls-mm-intro strong { color:var(--text);font-weight:500; }
+  .ls-mm-actions { display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap; }
+  .ls-mm-clear { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s; }
+  .ls-mm-clear:hover { border-color:var(--border-active);color:var(--text); }
+  .ls-mm-count { font-size:12px;color:var(--muted); }
+  .ls-mm-count span { color:var(--accent-teal);font-weight:700; }
+  .ls-mm-objectives { display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:7px;margin-bottom:16px; }
+  .ls-mm-obj { background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 13px;cursor:pointer;transition:all 0.15s;display:flex;gap:10px;align-items:flex-start; }
+  .ls-mm-obj:hover { border-color:var(--border-active);background:var(--surface2); }
+  .ls-mm-obj.checked { background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.35); }
+  .ls-mm-obj-num { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(255,255,255,0.06);color:var(--muted);margin-top:1px; }
+  .ls-mm-obj.checked .ls-mm-obj-num { background:rgba(52,211,153,0.2);color:var(--accent-teal); }
+  .ls-mm-obj-text { font-size:12px;line-height:1.5;color:rgba(232,234,240,0.68); }
+  .ls-mm-obj.checked .ls-mm-obj-text { color:var(--text); }
+  .ls-mm-result { background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.2);border-radius:12px;padding:15px 18px;display:none;animation:fadeIn 0.25s ease; }
+  .ls-mm-result.open { display:block; }
+  .ls-mm-result-label { font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-teal);margin-bottom:10px; }
+  .ls-mm-string { display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px; }
+  .ls-mm-method-pill { font-family:'Syne',sans-serif;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.25);color:var(--accent-teal);cursor:pointer;transition:all 0.15s; }
+  .ls-mm-method-pill:hover { background:rgba(52,211,153,0.2); }
+  .ls-mm-step-hint { font-size:11.5px;color:var(--muted);line-height:1.55; }
+
   /* MODERNE LERNMETHODEN */
   .methoden-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -1927,6 +2149,12 @@
       <div class="nav-item" onclick="showPage('bestpractice')" id="nav-bestpractice" style="color:var(--muted)">
         <span class="nav-num" style="background:rgba(96,165,250,0.12);color:#60a5fa;">BP</span> Best Practices
       </div>
+      <div class="nav-item" onclick="showPage('teamdynamik')" id="nav-teamdynamik" style="color:var(--muted)">
+        <span class="nav-num" style="background:rgba(52,211,153,0.12);color:var(--accent-teal);">TD</span> Team­dynamik & Psych. Sicherheit
+      </div>
+      <div class="nav-item" onclick="showPage('ls')" id="nav-ls" style="color:var(--muted)">
+        <span class="nav-num" style="background:rgba(167,139,250,0.12);color:#a78bfa;">LS</span> Liberating Structures
+      </div>
       <div class="nav-item" onclick="showPage('p3')" id="nav-p3" style="color:var(--muted)">
         <span class="nav-num" style="background:rgba(96,165,250,0.12);color:#60a5fa;">P3</span> eLearning & Learning Management System (LMS)
       </div>
@@ -2026,6 +2254,8 @@ const pages = {
           <div class="ov-phase-title" style="color:#60a5fa;">${t[currentLang].ovPraxis}</div>
           <div class="ov-step" onclick="event.stopPropagation();showPage('p1')"><span class="ov-step-num">P1</span><span class="ov-step-text">${t[currentLang].ovP1}</span></div>
           <div class="ov-step" onclick="event.stopPropagation();showPage('p2')"><span class="ov-step-num">P2</span><span class="ov-step-text">${t[currentLang].ovP2}</span></div>
+          <div class="ov-step" onclick="event.stopPropagation();showPage('teamdynamik')"><span class="ov-step-num">TD</span><span class="ov-step-text">Teamdynamik & Psychologische Sicherheit — Lencioni + Edmondson</span></div>
+          <div class="ov-step" onclick="event.stopPropagation();showPage('ls')"><span class="ov-step-num">LS</span><span class="ov-step-text">Liberating Structures — 33 Methoden + Leadership Decision Tree</span></div>
           <div class="ov-step" onclick="event.stopPropagation();showPage('p3')"><span class="ov-step-num">P3</span><span class="ov-step-text">eLearning, Learning Management System (LMS) & Lerntechnologien</span></div>
           <div class="ov-step" onclick="event.stopPropagation();showPage('p4')"><span class="ov-step-num">P4</span><span class="ov-step-text">${t[currentLang].ovP4}</span></div>
           <div class="ov-step" onclick="event.stopPropagation();showPage('p5')"><span class="ov-step-num">P5</span><span class="ov-step-text">Compliance, Projektmanagement (PM) & Stakeholder</span></div>
@@ -4773,6 +5003,346 @@ const pages = {
     </div>`;
   },
 
+  teamdynamik: () => `
+    <div class="page">
+      <div class="content-header">
+        <div class="td-badge">Team-Kompetenz</div>
+        <div class="step-title">Teamdynamik &<br>Psychologische Sicherheit</div>
+        <div class="step-tagline">Die wissenschaftliche Basis für leistungsstarke Teams — von Lencionis Five Dysfunctions bis zu Edmondsons Psychological-Safety-Forschung.</div>
+      </div>
+      <div class="content-body">
+
+        <div class="info-card">
+          <div class="card-label">Verbindung zum L&D-Framework</div>
+          <div class="card-title">Warum Teamdynamik ein L&D-Thema ist</div>
+          <div class="card-text">Teamdynamik ist keine Soft-Skill-Ergänzung — sie ist <strong>Voraussetzung für Transfer</strong>. Blume et al. (2010) zeigen: Peer Support und Supervisor Support sind die stärksten Prädiktoren für Lerntransfer. Ohne funktionale Teamdynamik und psychologische Sicherheit verpufft jedes Training. L&D-Interventionen auf Team-Ebene sind daher immer an beiden Modellen zu messen.</div>
+          <div class="confidence"><span class="confidence-dot" style="background:var(--accent-teal)"></span>94% Konfidenz — direkte Verbindung Edmondson (1999) und Blume Transfer-Meta-Analyse (2010)</div>
+        </div>
+
+        <div class="td-section-title lencioni">The Five Dysfunctions of a Team — Lencioni</div>
+
+        <div class="info-card" style="margin-bottom:16px;">
+          <div class="card-label">Modell-Einführung</div>
+          <div class="card-title">Pyramiden-Struktur: Dysfunktionen bauen aufeinander auf</div>
+          <div class="card-text">Patrick Lencioni (2002) beschreibt fünf Dysfunktionen, die als Pyramide organisiert sind — jede Ebene ist <strong>Voraussetzung</strong> für die darüberliegende. Wer nur Symptome auf den oberen Ebenen bekämpft (z.B. fehlende Accountability), ohne die Basis (Vertrauen) zu adressieren, erzielt keine nachhaltigen Ergebnisse. Klicke auf jede Ebene für Details.</div>
+        </div>
+
+        <div class="lencioni-pyramid-wrap">
+          <div class="lencioni-pyramid">
+
+            <div class="lp-layer lp-5" onclick="toggleLpLayer(this)">
+              <div class="lp-bar">
+                <div class="lp-left">
+                  <div class="lp-num">5</div>
+                  <div>
+                    <div class="lp-title">Fehlende Ergebnisorientierung</div>
+                    <div class="lp-sub">Inattention to Results</div>
+                  </div>
+                </div>
+                <div class="lp-chevron">▼</div>
+              </div>
+              <div class="lp-detail">
+                <div class="lp-detail-text">Teammitglieder priorisieren <strong>persönlichen Status oder Abteilungsinteressen</strong> über kollektive Ziele. Das Team gewinnt nicht, obwohl Einzelpersonen "gewinnen". Erkennbar an: Silodenken, politischen Spielen, fehlendem kollektivem Erfolgsgefühl.</div>
+                <div class="lp-detail-text"><strong>HR-Hebel:</strong> OKRs und gemeinsame Team-KPIs sichtbar machen. Belohnungssysteme auf kollektiven Erfolg ausrichten. Keine individuelle Beförderung auf Kosten der Team-Performance.</div>
+                <div class="lp-detail-tip">⚠ Wenn Führungskräfte Individuen befördern, die Team-Ziele untergraben, zerstört das Ergebnisorientierung nachhaltig — unabhängig von jedem Training.</div>
+              </div>
+            </div>
+
+            <div class="lp-layer lp-4" onclick="toggleLpLayer(this)">
+              <div class="lp-bar">
+                <div class="lp-left">
+                  <div class="lp-num">4</div>
+                  <div>
+                    <div class="lp-title">Fehlende Verantwortlichkeit</div>
+                    <div class="lp-sub">Avoidance of Accountability</div>
+                  </div>
+                </div>
+                <div class="lp-chevron">▼</div>
+              </div>
+              <div class="lp-detail">
+                <div class="lp-detail-text">Niemand spricht Kollegen auf <strong>schlechte Leistung oder kontraproduktives Verhalten</strong> an — um Konflikte zu vermeiden. Mittelmäßigkeit wird toleriert. Erkennbar an: "Das ist nicht meine Aufgabe", fehlenden Peer-Feedbacks, überlasteten Führungskräften als einzige Accountability-Instanz.</div>
+                <div class="lp-detail-text"><strong>HR-Hebel:</strong> Klare Erwartungen definieren (RACI, DRI). Peer-Feedback-Formate strukturieren. Performance-Kultur mit konkreten Standards, nicht nur Werten.</div>
+                <div class="lp-detail-tip">→ Accountability ohne Vertrauen und echte Commitments ist Kontrolle — und erzeugt Rückzug, keine Eigenverantwortung.</div>
+              </div>
+            </div>
+
+            <div class="lp-layer lp-3" onclick="toggleLpLayer(this)">
+              <div class="lp-bar">
+                <div class="lp-left">
+                  <div class="lp-num">3</div>
+                  <div>
+                    <div class="lp-title">Fehlende Verbindlichkeit</div>
+                    <div class="lp-sub">Lack of Commitment</div>
+                  </div>
+                </div>
+                <div class="lp-chevron">▼</div>
+              </div>
+              <div class="lp-detail">
+                <div class="lp-detail-text">Ohne echte Auseinandersetzung entstehen keine <strong>klaren Entscheidungen</strong>. Pseudokonsens — alle nicken, niemand ist wirklich committed. Erkennbar an: Entscheidungen, die in Meetings fallen und danach ignoriert werden; endlosen "Alignment"-Runden; fehlender Ownership.</div>
+                <div class="lp-detail-text"><strong>HR-Hebel:</strong> Entscheidungsprozesse strukturieren (DACI, Working Backwards). Disambiguierung als Skill trainieren. Meeting-Abschlüsse mit expliziten Commitments ("Wer macht was bis wann?").</div>
+                <div class="lp-detail-tip">→ Commitment erfordert kein Einstimmigkeit — nur das Gefühl, gehört worden zu sein und dann als Team hinter der Entscheidung zu stehen.</div>
+              </div>
+            </div>
+
+            <div class="lp-layer lp-2" onclick="toggleLpLayer(this)">
+              <div class="lp-bar">
+                <div class="lp-left">
+                  <div class="lp-num">2</div>
+                  <div>
+                    <div class="lp-title">Angst vor Konflikten</div>
+                    <div class="lp-sub">Fear of Conflict</div>
+                  </div>
+                </div>
+                <div class="lp-chevron">▼</div>
+              </div>
+              <div class="lp-detail">
+                <div class="lp-detail-text"><strong>Künstliche Harmonie</strong> verhindert produktive, sachliche Auseinandersetzung mit Ideen. Meetings sind höflich und folgenlos. Erkennbar an: keine Gegenargumente in Meetings, aber Flurgespräche danach; Führungskraft muss alle Konflikte moderieren.</div>
+                <div class="lp-detail-text"><strong>HR-Hebel:</strong> Konfliktkultur und Feedback-Normen explizit etablieren. Advocatus-Diaboli-Rolle in Entscheidungs-Meetings einführen. Unterschied zwischen "ideologischem Konflikt" (gut) und "persönlichem Konflikt" (schlecht) kommunizieren.</div>
+                <div class="lp-detail-tip">→ Das Ziel ist nicht weniger Konflikt — sondern mehr produktiver Dissens. Psychological Safety (Edmondson) ist der Schlüssel dazu.</div>
+              </div>
+            </div>
+
+            <div class="lp-layer lp-1" onclick="toggleLpLayer(this)">
+              <div class="lp-bar">
+                <div class="lp-left">
+                  <div class="lp-num">1</div>
+                  <div>
+                    <div class="lp-title">Fehlendes Vertrauen — Die Basis</div>
+                    <div class="lp-sub">Absence of Trust</div>
+                  </div>
+                </div>
+                <div class="lp-chevron">▼</div>
+              </div>
+              <div class="lp-detail">
+                <div class="lp-detail-text">Die Basis aller Dysfunktionen. Teammitglieder zeigen <strong>keine Schwächen, Fehler oder Unsicherheiten</strong> — das psychologische Risiko ist zu hoch. Energie geht in Selbstschutz statt in Zusammenarbeit. Erkennbar an: keine Hilfegesuche, kein Zugeben von Fehlern, defensive Reaktionen auf Feedback.</div>
+                <div class="lp-detail-text"><strong>HR-Hebel:</strong> Psychologische Sicherheit aufbauen (siehe unten). Führungskräfte als erste: eigene Fehler öffentlich benennen. Team-Normen für Verletzlichkeit explizit machen.</div>
+                <div class="lp-detail-tip">⭐ Kernaussage Lencionis: Ohne Vertrauen als Fundament sind alle anderen Interventionen Symptombekämpfung.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="td-section-title edmondson">Psychologische Sicherheit — Amy Edmondson</div>
+
+        <div class="info-card" style="margin-bottom:16px;">
+          <div class="card-label">Definition & Forschungsbasis</div>
+          <div class="card-title">Was psychologische Sicherheit bedeutet — und was nicht</div>
+          <div class="card-text">Edmondsons Definition (Harvard, 1999): Die gemeinsame Überzeugung im Team, dass <strong>interpersonelles Risikohandeln sicher ist</strong> — man kann sprechen, fragen, widersprechen und Fehler zugeben, ohne negative Konsequenzen zu fürchten.<br><br><strong>Wichtig:</strong> Psychologische Sicherheit ist nicht Komfort, nicht Nettigkeit und nicht Konfliktfreiheit. Es ist <strong>Mut ohne Angst</strong>. Google's Project Aristotle (2015) identifizierte es als den mit Abstand stärksten Prädiktor für Team-Effektivität unter allen analysierten Faktoren.</div>
+          <div class="confidence"><span class="confidence-dot" style="background:var(--accent-teal)"></span>96% Konfidenz — Edmondson (1999) peer-reviewed; Google Aristotle gut dokumentiert, breite Replikation</div>
+        </div>
+
+        <div class="td-section-title edmondson" style="margin-top:24px;">Die 4 Stufen — Timothy Clark</div>
+
+        <div class="ed-stages-grid">
+          <div class="ed-stage ed-1">
+            <div class="ed-stage-num">Stufe 1</div>
+            <div class="ed-stage-name">Inclusion Safety</div>
+            <div class="ed-stage-question">"Gehöre ich dazu?"</div>
+            <div class="ed-stage-risk">Risiko: Ausgrenzung</div>
+          </div>
+          <div class="ed-stage ed-2">
+            <div class="ed-stage-num">Stufe 2</div>
+            <div class="ed-stage-name">Learner Safety</div>
+            <div class="ed-stage-question">"Darf ich Fragen stellen und Fehler machen?"</div>
+            <div class="ed-stage-risk">Risiko: Inkompetent wirken</div>
+          </div>
+          <div class="ed-stage ed-3">
+            <div class="ed-stage-num">Stufe 3</div>
+            <div class="ed-stage-name">Contributor Safety</div>
+            <div class="ed-stage-question">"Darf ich meine Meinung einbringen?"</div>
+            <div class="ed-stage-risk">Risiko: Kritik / Ablehnung</div>
+          </div>
+          <div class="ed-stage ed-4">
+            <div class="ed-stage-num">Stufe 4</div>
+            <div class="ed-stage-name">Challenger Safety</div>
+            <div class="ed-stage-question">"Darf ich den Status quo hinterfragen?"</div>
+            <div class="ed-stage-risk">Risiko: Vergeltung / Ausgrenzung</div>
+          </div>
+        </div>
+
+        <div class="td-section-title praxis">Hebel zur Förderung psychologischer Sicherheit</div>
+
+        <div class="info-card" style="padding:0; overflow:hidden;">
+          <table class="ps-hebel-table">
+            <thead>
+              <tr>
+                <th>Ebene</th>
+                <th>Massnahme</th>
+                <th>Konfidenz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Führungskraft</strong></td>
+                <td>Eigene Fehler öffentlich benennen. Aktiv einladen: "Was übersehe ich hier?" Reaktion auf schlechte Nachrichten ist der Schlüsselmoment — wer Probleme bringt, darf nicht bestraft werden. Neugier statt Urteil als Standard.</td>
+                <td style="color:var(--accent-teal); font-family:'Syne',sans-serif; font-weight:700;">95%</td>
+              </tr>
+              <tr>
+                <td><strong>Team-Ebene</strong></td>
+                <td>Team-Normen explizit machen. Retrospektiven ohne Schuldzuweisung. Pre-Mortem-Methode ("Was könnte schiefgehen?") normalisiert kritisches Denken. Advocatus-Diaboli-Rolle in Meetings.</td>
+                <td style="color:var(--accent-amber); font-family:'Syne',sans-serif; font-weight:700;">88%</td>
+              </tr>
+              <tr>
+                <td><strong>Organisation</strong></td>
+                <td>Blameless Post-Mortems. HR-Prozesse prüfen: Werden Fehler in Performance Reviews bestraft? PS in Engagement-Survey messen (Edmondsons 7-Item-Skala). Hiring & Promotion auf PS-Modellverhalten prüfen.</td>
+                <td style="color:var(--accent-amber); font-family:'Syne',sans-serif; font-weight:700;">85%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="td-section-title edmondson" style="margin-top:32px;">Edmondsons 7-Item-Skala</div>
+
+        <div class="info-card" style="padding:0; overflow:hidden; margin-bottom:20px;">
+          <div style="padding:16px 20px 4px; font-family:'Syne',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Skala-Items (Bewertung 1–7, Likert)</div>
+          <div class="ps-skala-item"><div class="ps-skala-num">1</div><div class="ps-skala-text">Wenn jemand im Team einen Fehler macht, wird er dafür nicht bestraft.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">2</div><div class="ps-skala-text">Teammitglieder können Probleme und schwierige Themen ansprechen.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">3</div><div class="ps-skala-text">Niemand im Team würde absichtlich andere untergraben.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">4</div><div class="ps-skala-text">Jede Person wird im Team respektiert.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">5</div><div class="ps-skala-text">Es ist sicher, im Team ein Risiko einzugehen.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">6</div><div class="ps-skala-text">Es ist leicht, andere Teammitglieder um Hilfe zu bitten.</div></div>
+          <div class="ps-skala-item"><div class="ps-skala-num">7</div><div class="ps-skala-text">Einzigartige Fähigkeiten jeder Person werden geschätzt und genutzt.</div></div>
+        </div>
+
+        <div class="td-section-title praxis">Die häufigsten Umsetzungsfehler</div>
+
+        <div class="fehler-grid">
+          <div class="fehler-card">
+            <div class="fehler-title">Einmaliger Workshop</div>
+            <div class="fehler-text">Psychologische Sicherheit ist Kultur — kein Event. Ein Workshop ohne Verhaltensänderung verpufft innerhalb von Wochen.</div>
+          </div>
+          <div class="fehler-card">
+            <div class="fehler-title">Führungskräfte ausgeklammert</div>
+            <div class="fehler-text">Leadership-Verhalten ist in der Forschung der stärkste Prädiktor. Ohne Führungskräfte-Commitment ist jede Massnahme wirkungslos.</div>
+          </div>
+          <div class="fehler-card">
+            <div class="fehler-title">Werte ohne Verhalten</div>
+            <div class="fehler-text">Mitarbeitende beobachten Taten, nicht Worte. Wer Fehler in Interviews bestraft, signalisiert: Sicherheit ist Lippenbekenntnis.</div>
+          </div>
+          <div class="fehler-card">
+            <div class="fehler-title">Konflikte weiter vermeiden</div>
+            <div class="fehler-text">PS ≠ Konfliktfreiheit. Wenn gesunder Dissens immer noch bestraft wird, bleibt PS ein leeres Konzept. Produktiver Widerspruch muss sichtbar belohnt werden.</div>
+          </div>
+          <div class="fehler-card">
+            <div class="fehler-title">Keine Messung</div>
+            <div class="fehler-text">Was nicht gemessen wird, verändert sich nicht systematisch. Edmondsons Skala in regelmässige Pulse-Surveys integrieren.</div>
+          </div>
+          <div class="fehler-card">
+            <div class="fehler-title">Symptome statt Ursache</div>
+            <div class="fehler-text">Accountability-Workshops ohne Vertrauen als Basis — direkte Analogie zu Lencionis Warnung. Immer bei der Basis beginnen.</div>
+          </div>
+        </div>
+
+        <div class="questions-box teal">
+          <div class="questions-title">Verbindung — Lencioni & Edmondson</div>
+          <div class="question-item"><span class="q-num">→</span><span>Psychologische Sicherheit ist die <strong>operative Umsetzung von Lencionis Basis-Ebene "Vertrauen"</strong> — aber konkreter, messbarer und handlungsorientierter.</span></div>
+          <div class="question-item"><span class="q-num">→</span><span>Ohne PS bleibt Lencionis Pyramide ein theoretisches Konstrukt. Mit PS bekommt sie ein Werkzeug.</span></div>
+          <div class="question-item"><span class="q-num">→</span><span>Für L&D: Teamdynamik-Interventionen immer an beiden Modellen orientieren — Dysfunktionen diagnostizieren (Lencioni), dann gezielt PS aufbauen (Edmondson).</span></div>
+        </div>
+
+        <div class="confidence"><span class="confidence-dot" style="background:var(--accent-teal)"></span>93% Gesamtkonfidenz — Lencioni (2002) und Edmondson (1999) beide gut dokumentiert, breite Praxisvalidierung</div>
+
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="showPage('bestpractice')">← Best Practices</button>
+        <button class="nav-btn next" onclick="showPage('ls')"><div><span class="nav-btn-label">Weiter</span><span class="nav-btn-title">Liberating Structures →</span></div></button>
+      </div>
+    </div>`,
+
+  ls: () => `
+    <div class="page">
+      <div class="content-header">
+        <div class="ls-badge">Facilitation & Leadership</div>
+        <div class="step-title">Liberating Structures</div>
+        <div class="step-tagline">33 Mikro-Methoden für inklusive, partizipative Meetings — sortierbar, mit vollständigen Anleitungen beim Klick, Decision Tree und Selection Matchmaker.</div>
+      </div>
+      <div class="content-body">
+
+        <div class="info-card">
+          <div class="card-label">Was sind Liberating Structures?</div>
+          <div class="card-title">33 Alternativen zu Präsentation, Diskussion & Brainstorming</div>
+          <div class="card-text">Entwickelt von Henri Lipmanowicz und Keith McCandless: LS sind <strong>Mikro-Strukturen</strong> — kleine Veränderungen in den Protokollen wie wir uns treffen, entscheiden und zusammenarbeiten. Sie aktivieren <strong>alle Stimmen gleichzeitig</strong>, unabhängig von Hierarchie.<br><br>Jede LS ist nach denselben Elementen aufgebaut: Was wird möglich, Ablauf, Min Specs, Tipps & Traps, Varianten, Beispiele. Klicke eine Kachel für die vollständige Anleitung.</div>
+          <div class="confidence"><span class="confidence-dot" style="background:#a78bfa"></span>Quelle: liberatingstructures.com — McCandless & Lipmanowicz — CC License</div>
+        </div>
+
+        <div style="font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">33 Methoden — sortieren, filtern, Anleitung lesen</div>
+
+        <div class="ls-controls" id="ls-controls">
+          <span class="ls-sort-label">Sortieren:</span>
+          <button class="ls-ctrl-btn sort-active" onclick="lsSort('cat',this)">Kategorie</button>
+          <button class="ls-ctrl-btn" onclick="lsSort('cx',this)">Komplexität</button>
+          <button class="ls-ctrl-btn" onclick="lsSort('time',this)">Dauer</button>
+          <button class="ls-ctrl-btn" onclick="lsSort('group',this)">Gruppengrösse</button>
+          <div class="ls-ctrl-divider"></div>
+          <span class="ls-sort-label">Filter:</span>
+          <button class="ls-ctrl-btn active" onclick="lsFilter('all',this)">Alle</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('starter',this)">Einstieg</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('discovery',this)">Exploration</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('decision',this)">Entscheidung</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('peer',this)">Peer-Lernen</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('empathy',this)">Empathie</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('strategy',this)">Strategie</button>
+          <button class="ls-ctrl-btn" onclick="lsFilter('complex',this)">Komplex</button>
+          <div class="ls-ctrl-divider"></div>
+          <input class="ls-search" type="text" placeholder="Suchen…" oninput="lsSearch(this.value)" id="ls-search-input">
+        </div>
+
+        <div id="ls-grid-wrap"></div>
+        <div class="ls-guide" id="ls-guide"></div>
+
+        <!-- TOOLS: Decision Tree + Matchmaker as Accordions -->
+        <div class="ls-tools-section">
+          <div style="font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Workshop-Planung</div>
+          <div class="ls-accordion">
+
+            <div class="ls-acc-header open" onclick="lsToggleAcc('dt',this)">
+              <span class="ls-acc-title">🗺️ Decision Tree — Welche LS für welches Szenario?</span>
+              <span class="ls-acc-chevron">▼</span>
+            </div>
+            <div class="ls-acc-body open" id="ls-acc-dt">
+              <div class="ls-dt-intro"><strong>Welche LS für welche Situation?</strong> — Wähle ein typisches Leadership- oder Teamentwicklungs-Szenario. Der Tree empfiehlt die 2 stärksten Methoden (lila) plus 2 ergänzende und einen Workshop-String.</div>
+              <div class="ls-dt-scenarios">
+                <div class="ls-dt-btn" onclick="lsDT('trust',this)"><div class="ls-dt-btn-icon">🔐</div><div class="ls-dt-btn-title">Vertrauen aufbauen</div><div class="ls-dt-btn-sub">Neues Team, Misstrauen, erstes Meeting</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('psych',this)"><div class="ls-dt-btn-icon">🛡️</div><div class="ls-dt-btn-title">Psychologische Sicherheit</div><div class="ls-dt-btn-sub">Keine Meinungen, Angst vor Kritik</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('vision',this)"><div class="ls-dt-btn-icon">🧭</div><div class="ls-dt-btn-title">Vision & Purpose klären</div><div class="ls-dt-btn-sub">Wozu machen wir das? Sinnfrage</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('conflict',this)"><div class="ls-dt-btn-icon">⚡</div><div class="ls-dt-btn-title">Konflikte & Spannungen</div><div class="ls-dt-btn-sub">Unausgesprochenes ansprechen</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('innovation',this)"><div class="ls-dt-btn-icon">💡</div><div class="ls-dt-btn-title">Innovation & Ideen</div><div class="ls-dt-btn-sub">Kreativität entfesseln, Lösungen finden</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('decision',this)"><div class="ls-dt-btn-icon">✅</div><div class="ls-dt-btn-title">Entscheidungen & Prioritäten</div><div class="ls-dt-btn-sub">Aus vielen Optionen wählen</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('feedback',this)"><div class="ls-dt-btn-icon">🔄</div><div class="ls-dt-btn-title">Feedback & Reflexion</div><div class="ls-dt-btn-sub">Nach Events, Projekten, Phasen</div></div>
+                <div class="ls-dt-btn" onclick="lsDT('change',this)"><div class="ls-dt-btn-icon">🌀</div><div class="ls-dt-btn-title">Veränderung & Transformation</div><div class="ls-dt-btn-sub">Change, Restrukturierung, neue Richtung</div></div>
+              </div>
+              <div class="ls-dt-result" id="ls-dt-result"></div>
+            </div>
+
+            <div class="ls-acc-header" onclick="lsToggleAcc('mm',this)">
+              <span class="ls-acc-title">🎯 Selection Matchmaker — Ziele wählen → String bauen</span>
+              <span class="ls-acc-chevron">▼</span>
+            </div>
+            <div class="ls-acc-body" id="ls-acc-mm">
+              <div class="ls-mm-intro">Aus dem offiziellen <strong>LS Selection Matchmaker (v9)</strong> von McCandless & Lipmanowicz: Wähle 3–7 Ziele für dein Meeting oder Workshop. Der Matchmaker generiert deinen <strong>ersten String</strong> — und hebt die Methoden im Tile-Grid oben grün hervor.</div>
+              <div class="ls-mm-actions">
+                <button class="ls-mm-clear" onclick="lsMMClear()">Alle abwählen</button>
+                <span class="ls-mm-count" id="ls-mm-count">0 Ziele ausgewählt</span>
+              </div>
+              <div class="ls-mm-objectives" id="ls-mm-objectives"></div>
+              <div class="ls-mm-result" id="ls-mm-result">
+                <div class="ls-mm-result-label">Dein erster String</div>
+                <div class="ls-mm-string" id="ls-mm-string"></div>
+                <div class="ls-mm-step-hint">Klicke eine Methode im String → springt zur Kachel oben und öffnet die Anleitung. Reihenfolge: <strong>Öffnen → Erkunden → Entscheiden → Schliessen.</strong></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="showPage('teamdynamik')">← Teamdynamik</button>
+        <button class="nav-btn next" onclick="showPage('p3')"><div><span class="nav-btn-label">Weiter</span><span class="nav-btn-title">eLearning & LMS →</span></div></button>
+      </div>
+    </div>`,
+
   resources: () => `
     <div class="page">
       <div class="content-header">
@@ -4827,7 +5397,7 @@ const pages = {
     </div>`
 };
 
-const stepOrder = ['overview','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','p1','p2','bestpractice','p3','p4','p5','usecases','decisiontree','methoden','research','glossar','resources'];
+const stepOrder = ['overview','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','p1','p2','bestpractice','teamdynamik','ls','p3','p4','p5','usecases','decisiontree','methoden','research','glossar','resources'];
 const stepPhases = {s1:'p1',s2:'p1',s3:'p1',s4:'p1',s5:'p2',s6:'p2',s7:'p2',s8:'p2',s9:'p3',s10:'p3',s11:'p3',s12:'p3'};
 
 const dtScenarios = {
@@ -5188,6 +5758,16 @@ function showPage(id) {
   document.getElementById('main-content').scrollTop = 0;
   window.scrollTo(0, 0);
 
+  // Init LS grid after render
+  if (id === 'ls') {
+    lsCurrentCat = 'all';
+    lsCurrentSort = 'cat';
+    lsCurrentSearch = '';
+    lsSelectedN = null;
+    lsMMChecked = [];
+    setTimeout(function(){ lsRender(); lsMMRender(); }, 0);
+  }
+
   // Update nav active states
   document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
   const navEl = document.getElementById('nav-' + id);
@@ -5234,6 +5814,373 @@ function toggleSub(card) {
     card.classList.add('expanded');
   }
 }
+
+function toggleLpLayer(layer) {
+  var isActive = layer.classList.contains('active');
+  document.querySelectorAll('.lp-layer').forEach(function(l) { l.classList.remove('active'); });
+  if (!isActive) layer.classList.add('active');
+}
+
+// ========== LIBERATING STRUCTURES — full rebuild ==========
+var lsCatNames = {starter:'Einstieg & Aktivierung',discovery:'Exploration & Reflexion',decision:'Entscheidung & Priorisierung',peer:'Peer-Lernen & Coaching',empathy:'Empathie & Verbindung',strategy:'Strategie & Planung',complex:'Komplexität & Systeme'};
+var lsCatColors = {starter:'var(--accent-teal)',discovery:'var(--phase1)',decision:'var(--accent-amber)',peer:'var(--phase3)',empathy:'#f472b6',strategy:'#60a5fa',complex:'var(--muted)'};
+
+// Full guide data for all 33 methods — purpose, steps, tips, traps, variants, link
+var lsGuides = {
+  1:{purpose:'Engage everyone simultaneously — from solo to pairs to foursomes to whole group. No one is left out. Avoids group-think and domination by a few voices.',steps:['Silent self-reflection on a question (1 min)','Share with a partner (2 min)','Share and develop ideas in a foursome (4 min)','Ask each group to share one key insight with the whole group'],tips:['Keep timing tight — move on even if groups want more time','Use a bold, specific question that everyone can answer from experience','Great for opening any meeting or after new information is shared'],traps:['Vague questions produce vague answers','Skipping the individual step loses the diversity of thought','Going straight to all = conventional open discussion'],variants:['1-2-4-8-All for larger groups','Use for closing reflection: "What will you do differently?"','Use for anonymous idea submission before sharing'],link:'https://www.liberatingstructures.com/1-1-2-4-all/'},
+  2:{purpose:'Help participants get to know each other quickly, building new connections while sharing challenges and expectations. Creates energy and engagement from the first moment.',steps:['Give each participant a card with a question to explore','Form pairs and share for 2 minutes','Signal to switch and form new pairs (repeat 2–3 rounds)','Optionally debrief: "What surprised you?"'],tips:['Start with an open question linked to the work at hand','Keep rounds short and crisp — 2 min max','Works brilliantly as the very first activity of any event'],traps:['Generic icebreaker questions waste the potential','Too many rounds drain energy','Not debriefing means patterns stay invisible'],variants:['Two different questions — one per person','Use for reconnecting with colleagues after a long absence','Virtual: use breakout rooms in rapid rotation'],link:'https://www.liberatingstructures.com/2-impromptu-networking/'},
+  3:{purpose:"Understand and articulate the deeper purpose behind your work. Helps groups move from 'what' to 'why' — unlocking intrinsic motivation and shared direction.",steps:['Ask one person: "Why is this work important to you?"','After their answer: "And why is that important?"','Repeat 7–9 times, each time going deeper','Debrief: what did you discover about purpose?'],tips:['The deepest insights come in rounds 5–9 — don\'t stop early','Works in pairs or with a whole group listening','Pair with Purpose-To-Practice for full initiative design'],traps:['Stopping after 3 whys misses the point','Allowing abstract answers — push for personal, concrete ones','Using it too early before trust is established'],variants:['Each person does their own Nine Whys in writing first','Group version: collective Nine Whys for an initiative','Pair with 1-2-4-All to surface shared purpose'],link:'https://www.liberatingstructures.com/3-nine-whys/'},
+  4:{purpose:'Articulate the paradoxical challenges that must be confronted for a group to succeed. Gives language to tensions that are typically avoided, enabling productive navigation.',steps:['Introduce the concept of a wicked question (a paradox, not a problem to solve)','Small groups generate candidates: "How can we be X and Y at the same time?"','Share and refine across groups','Select the 1–3 questions that feel most alive'],tips:['A great wicked question makes people nod and groan simultaneously','Pair with TRIZ to find what blocks both horns of the paradox','Use when you sense the group is stuck in either/or thinking'],traps:['Problem statements are not wicked questions','One "right answer" questions are not wicked','Don\'t resolve the paradox — sit with it'],variants:['Use in strategy sessions to frame the core dilemma','Precede with Nine Whys to find the paradoxes worth naming','Visual: write on a board as "How can we be A while also being B?"'],link:'https://www.liberatingstructures.com/4-wicked-questions/'},
+  5:{purpose:"Discover and build on the root causes of success rather than failure. Shifts the group's lens from what's broken to what's already working — and why.",steps:['In pairs: "Tell me about a time when this work was at its very best"','Interviewer listens and notes themes (8 min)','Switch roles (8 min)','Groups of 4 share key themes','Whole group: what patterns do we see?'],tips:['Let the interviewee talk — resist the urge to comment','Focus on concrete stories, not opinions or generalisations','Pairs before foursomes maintains intimacy of the stories'],traps:['Rushing past stories to get to analysis','Allowing abstract "best practices" instead of real stories','Using evaluative questions ("Was that good?") during interviews'],variants:['Use at the start of a change initiative to anchor identity','Combine with 1-2-4-All to surface collective strengths','Pair with What I Need From You to act on strengths'],link:'https://www.liberatingstructures.com/5-appreciative-interviews-ai/'},
+  6:{purpose:'Clear the field for innovation by making space — identifying and stopping activities that prevent progress. Reverse-engineering failure reveals what to stop doing.',steps:['Pose the question: "What would we do if we wanted to guarantee failure?"','Generate a comprehensive list (individual → group)','"How are we currently doing some of these things?"','Identify what to stop immediately to free up space'],tips:['The more specific and outrageous the answers, the more useful','Works best when people feel safe enough to name real dysfunction','Follow with 15% Solutions to fill the cleared space'],traps:['Treating it as a joke — every item should be taken seriously','Not following up with action on what to stop','Using it without commitment to act on findings'],variants:['Use in project post-mortems','Add "what might naturally lead us there?" for strategic planning','Pair with Min Specs to identify what we must keep'],link:'https://www.liberatingstructures.com/6-making-space-with-triz/'},
+  7:{purpose:"Discover and unleash each person's agency by focusing on what they have the freedom to do right now — without approval or resources. Builds momentum.",steps:['Pose: "What is your 15% Solution? What can you do without anyone\'s approval?"','Individual reflection (3 min)','Share in pairs or small groups','Identify any small first steps to take immediately'],tips:['Connect to the specific challenge or goal at hand','15% = the action within your own sphere of influence','Use after a brainstorm or DT session to make things concrete'],traps:['Confusing 15% with wishful thinking — it must be actionable today','Letting people default to "I need more resources first"','Not following up to see what happened'],variants:['Closing ritual for any workshop','Combine with Troika Consulting for peer support on the 15%','Scale: what is the team\'s collective 15%?'],link:'https://www.liberatingstructures.com/7-15-solutions/'},
+  8:{purpose:'Get immediate, practical help from peers for real challenges. Enables rapid peer coaching without the overhead of formal consulting or hierarchical approval.',steps:['Person 1 presents a challenge (2 min), no dialogue','Persons 2 & 3 ask clarifying questions (1 min)','Person 1 turns back / is silent — Persons 2 & 3 consult each other (5 min)','Persons 2 & 3 offer insights; Person 1 responds (2 min)','Rotate and repeat'],tips:['The "turned back" step is critical — it forces genuine peer consultation','Keep triads consistent for psychological safety','Use real, current challenges — not hypotheticals'],traps:['Persons 2 & 3 giving advice instead of asking questions first','Person 1 defending before hearing','Skipping the rotation — everyone needs to receive help'],variants:['Tetrahedron Consulting: groups of 4','Add a brief write-up of insights afterwards','Virtual: use breakout rooms with a shared timer'],link:'https://www.liberatingstructures.com/8-troika-consulting/'},
+  9:{purpose:'Reflect together on a shared experience — moving from observation to interpretation to action. Prevents the common failure of experiences generating no learning.',steps:['"What?" — What just happened? What did you observe? (facts only)','Share observations in 1-2-4-All format (10 min)','"So What?" — What does it mean? What patterns do we see? (12 min)','"Now What?" — What should we do differently? Concrete next steps (10 min)'],tips:['Keep "What?" strictly factual — no interpretations yet','The power is in the sequence — don\'t jump to "Now What?" early','Works brilliantly as a closing ritual for any session or sprint'],traps:['Mixing "What?" and "So What?" — they must stay separate','Skipping "Now What?" because time runs out','Facilitator editorialising during observation phase'],variants:['Written version for asynchronous reflection','Rapid version (15 min total) for end-of-day standup','Pair with 15% Solutions for the "Now What?" step'],link:'https://www.liberatingstructures.com/9-what-so-what-now-what-w/'},
+  10:{purpose:'Spread innovations and solutions that already exist in the system but remain invisible. Taps local wisdom to solve chronic challenges at scale.',steps:['Introduce 7 questions, one at a time (facilitated)','How do you know when the problem is present? (observe, measure)','How do you currently contribute to the problem? (accountability)','What could you do to address the problem right now?','What hinders you? What resources do you need?','Who else should be involved?','Debrief: what actions will you take?'],tips:['Positive deviance framing: "Who is already succeeding and how?"','Works best with front-line workers who hold practical knowledge','Multiple rounds deepen commitment and spread solutions'],traps:['Turning it into a complaint session','Not following up to verify actions taken','Using with groups where power imbalances prevent honesty'],variants:['Combine with Shift & Share to spread the solutions found','Use as part of a change management initiative','Pair with Social Network Webbing to map who needs to connect'],link:'https://www.liberatingstructures.com/10-discovery-action-dialogue/'},
+  11:{purpose:'Spread know-how and innovations rapidly across large groups. Multiple simultaneous small-group exchanges replace the slow bottleneck of plenary presentations.',steps:['5–7 innovators each set up a "station"','Groups rotate on a fixed schedule (8–15 min per round)','Innovators present and respond to questions','Final debrief in the whole group'],tips:['Prepare innovators in advance — they\'ll share 4–6 times','Signal rotation with sound/light to maintain energy','Works best when the groups genuinely need each other\'s knowledge'],traps:['Too many rounds creates fatigue','Stations that are too similar — ensure real diversity','Not debriefing = connections between stations stay invisible'],variants:['Learning Expo format with open browsing','Combine with Celebrity Interview at the main station','Virtual: use rooms with a rotating schedule'],link:'https://www.liberatingstructures.com/11-shift-share/'},
+  12:{purpose:'Rapidly generate and sift a large group\'s most powerful ideas. Gets from 100 ideas to the top 10 in under 30 minutes — without politics or hierarchy.',steps:['Each person writes their boldest idea on a card','Cards are passed and rated on a 1–5 scale by each reader','After 5 exchanges, tally the scores','Top-scoring ideas are read aloud and discussed'],tips:['Encourage bold, specific ideas — not vague directions','The voting is physical and visceral — analog beats digital here','Works with up to 200 people simultaneously'],traps:['Ideas that are too vague get mid-range scores','Not allotting time to discuss the top ideas after surfacing them','Allowing too much time on any one step — pace matters'],variants:['Use with sticky notes on a wall for visual impact','Digital version with shared documents or voting tools','Pair with 1-2-4-All to develop the top ideas further'],link:'https://www.liberatingstructures.com/12-2510-crowd-sourcing/'},
+  13:{purpose:'Tap the wisdom of the whole group through rapid consultation cycles. Each person gets deep, quality help from multiple peers on a real challenge.',steps:['Challenge holder presents their situation (5 min)','Consulting group asks clarifying questions (5 min)','Challenge holder is silent; group consults (10–15 min)','Challenge holder responds and captures insights (5 min)','Rotate — next person in the circle presents'],tips:['Larger groups (5–7) per circle give richer input','Works best with real, pressing, unsolved challenges','Video-record for people to review later'],traps:['Giving advice instead of asking questions first','Challenge holder defending their position','Not rotating — everyone should receive and give'],variants:['Virtual: works well in breakout rooms with a shared doc','Fishbowl format: rest of room observes','Speed version: 5-7-3 minutes per round'],link:'https://www.liberatingstructures.com/13-wise-crowds/'},
+  14:{purpose:'Identify and commit to only the essential rules needed to achieve a purpose — eliminating unnecessary constraints. Creates clarity and maximum freedom within the space.',steps:['Name the initiative or project','Generate all possible rules: "What must we always do? Never do?"','Vote on which are truly non-negotiable','Trim until only 2–5 Min Specs remain','Test: does each spec prevent disaster? If not, cut it'],tips:['Start with a long list — you can\'t cut what you haven\'t named','Each spec should be testable and observable','Pair with Purpose-To-Practice for complete initiative design'],traps:['Keeping nice-to-haves as Min Specs','Too many specs = back to bureaucracy','Not testing each spec against the "does it prevent disaster?" criterion'],variants:['Use for team working agreements','Apply to recurring meetings: what are the minimum rules?','Combine with TRIZ to clear the field first'],link:'https://www.liberatingstructures.com/14-min-specs/'},
+  15:{purpose:"Develop effective solutions to chronic challenges through improvisation and prototyping. Try solutions in simulated conditions and improve them rapidly through group observation.",steps:['Identify the chronic challenge to address','Groups of 3–5 develop a short improv scenario (5 min)','Each group performs (3–5 min)','Whole group debriefs: what worked, what didn\'t, what to try next','Improve and replay the scenario'],tips:['Focus on specific interactions, not abstract concepts','Debrief immediately after each round — insights decay fast','Allow for absurdity — it reduces inhibition and surfaces truth'],traps:['Embarrassing participants who are not comfortable with improv','Treating it as entertainment rather than learning','Skipping multiple rounds — improvement only comes through repetition'],variants:['Use to practice difficult conversations','Role-play customer interactions or stakeholder meetings','Pair with Helping Heuristics to practice varied helping styles'],link:'https://www.liberatingstructures.com/15-improv-prototyping/'},
+  16:{purpose:'Make the full range of helping options visible and available — from prescribing to accompanying. Expand the repertoire beyond just "giving advice".',steps:['Share the spectrum of helping modes (from expert advice to witnessing)','Identify: which mode am I in right now?','Practice shifting modes in triads','Debrief: what shifted when you changed modes?'],tips:['The visual card set makes the modes tangible and memorable','Works well before Troika Consulting to prime better coaching','Particularly powerful for managers and HR professionals'],traps:['Staying only in "advice-giving" mode — the default trap','Not practicing switching — knowledge without embodiment','Skipping the debrief on what changed'],variants:['Use as a team coaching protocol','Precede 1:1 conversations with a Helping Heuristics check-in','Pair with Heard, Seen, Respected for empathy depth'],link:'https://www.liberatingstructures.com/16-helping-heuristics/'},
+  17:{purpose:"Engage everyone in a structured dialogue on a shared topic. Creates deeper listening than a normal discussion — everyone speaks, everyone is heard.",steps:['Set up circles of 5–6 with a talking piece','Round 1: open question, each person speaks uninterrupted','Round 2: reactions and connections','Round 3: what\'s needed now?','Closing: each person shares one word'],tips:['Talking piece + no cross-talk changes everything','Works especially well for difficult, emotional or complex topics','Physical setup matters — round tables, candles, flowers signal respect'],traps:['People speaking to the facilitator instead of the group','Cross-talk that breaks the listening discipline','Using it for simple questions that don\'t need this depth'],variants:['World Café format: rotate tables every 20 min','Virtual: use a shared document to track talking piece turns','Pair with Drawing Together for visual harvesting'],link:'https://www.liberatingstructures.com/17-conversation-cafe/'},
+  18:{purpose:'Reveal the direct experience of end-users or front-line workers to decision-makers who rarely encounter it. Breaks down silos between those who experience and those who decide.',steps:['5–8 users/practitioners sit in an inner circle','They share experiences in response to open questions','Outer circle (decision-makers) listens without speaking','Open discussion: what did the outer circle learn?','Identify immediate actions'],tips:['Outer circle silence is non-negotiable — it creates the listening','Choose inner circle members who will speak honestly','Debrief focuses on the outer circle\'s learning, not the content'],traps:['Outer circle members whispering or reacting visibly','Selecting inner circle members who will give "safe" answers','Not converting insights into concrete actions'],variants:['Army after-action fishbowl: inner circle = soldiers, outer = officers','Reverse fishbowl: leadership in centre, employees outside','Customer fishbowl: users in centre, product team outside'],link:'https://www.liberatingstructures.com/18-users-experience-fishbowl/'},
+  19:{purpose:'Build empathy and belonging by sharing and listening to stories of times when we felt excluded, dismissed or disrespected. Foundational for inclusion work.',steps:['In pairs: "Tell me about a time you felt NOT heard, seen or respected"','Listener listens only — no advice, no fixing (5 min)','Switch roles (5 min)','Debrief in groups of 4: what patterns emerge?','Whole group: what does this mean for our work together?'],tips:['Leader goes first — models vulnerability','Works even faster when done across hierarchical lines','Pair with Improv Prototyping to practice new behaviours'],traps:['Allowing advice-giving during the listening step','Not connecting stories to systemic patterns','Using it as a one-off event without follow-through'],variants:['Use at the start of any diversity/inclusion initiative','Pair with Drawing Together to visualise the stories','Annual ritual: makes inclusion a practice, not a project'],link:'https://www.liberatingstructures.com/19-heard-seen-respected-hsr/'},
+  20:{purpose:"Reveal insights and pathways forward through images and symbols. Activates the right hemisphere and accesses knowing that words alone can't reach.",steps:['Introduce 5 universal symbols (circle, triangle, arrow, spiral, person)','Pose a question or challenge','Each person draws their response using only the 5 symbols','Share in pairs, then foursomes','Whole group: what patterns do we see?'],tips:['Reassure that artistic skill is irrelevant','Use large paper — it encourages bolder, less guarded responses','Works well after complex verbal discussions to synthesise'],traps:['Dismissing it as "not serious enough"','Too much interpretation by the facilitator','Small paper = small thinking'],variants:['Use for strategy mapping','Closing ritual: draw what you\'re taking home','Combine with W³ for a visual debrief'],link:'https://www.liberatingstructures.com/20-drawing-together/'},
+  21:{purpose:'Collaboratively design the sequence of activities for a workshop or initiative — so that the design itself is inclusive and the group owns the plan.',steps:['Define the challenge or event to be designed','Identify the key purposes to achieve','Generate candidate LS or activities','Arrange them in a logical sequence on storyboard cards','Test for coherence: does each step prepare for the next?','Revise and finalize'],tips:['Use actual LS Design Cards for physical manipulation','Design in groups of 3–5 for richer options','Leave space for emergence — over-scripting kills energy'],traps:['Designing alone then selling to others','Too much detail — plan for first 30 min clearly, sketch the rest','Ignoring the physical and logistical constraints'],variants:['Use for recurring meeting redesign','Design a 6-month team development arc','Virtual: shared Miro/Mural board with LS cards'],link:'https://www.liberatingstructures.com/21-design-storyboards/'},
+  22:{purpose:"Draw out insights from an expert or leader through an interview format — more engaging, revealing and accessible than a presentation. Makes the person's story and wisdom visible.",steps:['Brief the interviewee in advance — focus on stories, not presentations','Interviewer prepares 5–7 questions: focus on moments, decisions, failures','Interview in front of the whole group (20–40 min)','Open questions from the audience (10–15 min)','Debrief: what resonated?'],tips:['Train the interviewer — the quality of questions determines everything','Ask about failures and uncertainties — that\'s where the real learning is','Works brilliantly with senior leaders who "don\'t present well"'],traps:['Letting it become a monologue','Questions that invite only positive stories','Not allowing audience time for follow-up'],variants:['Reverse interview: audience interviews the leader','Panel of 3 celebrity interviewees','Pair with W³ for structured reflection after'],link:'https://www.liberatingstructures.com/22-celebrity-interview/'},
+  23:{purpose:"Map informal networks to understand how value is actually created or blocked. Makes the invisible visible — who connects to whom, where are the hubs, where are the gaps.",steps:['Each person writes names of those they interact with most on sticky notes','Map on a large surface: connections = lines, nodes = people/roles','Identify hubs, bridges, isolated nodes','Discuss: where are the bottlenecks? The hidden connectors?','Decide how to strengthen the network'],tips:['Keep it informal — formal org charts already exist','Focus on actual interactions, not theoretical ones','Works best with teams that have been working together for 6+ months'],traps:['Using formal hierarchies as a starting point','Not discussing what the map reveals','Creating the map then doing nothing with it'],variants:['Cross-departmental mapping for change initiatives','Map networks before and after an intervention','Combine with DAD to surface positive deviants in the network'],link:'https://www.liberatingstructures.com/23-social-network-webbing/'},
+  24:{purpose:"Surface and clarify the needs that different groups have from each other. Move from vague frustrations to specific, actionable requests and clear commitments.",steps:['Each group identifies 1–2 needs they have from every other group','Groups send a representative to a central stage','Each rep makes a clear request: "From X, we need Y"','Each group responds: Yes / No / Yes if... / Later','All yes\'s become commitments; all no\'s are explained'],tips:['Requests must be specific and actionable — not "more communication"','The responding group may only say Yes/No/If/Later — no debate','Do a round of 15% Solutions after to unblock the "If" answers'],traps:['Vague requests that can\'t be acted on','Groups debating instead of simply responding','Not following up on commitments within 2 weeks'],variants:['Use between departments in a change process','Works in large groups: 50–100 people simultaneously','Pair with Min Specs to agree on shared rules after'],link:'https://www.liberatingstructures.com/24-what-i-need-from-you-winfy/'},
+  25:{purpose:'Invite passionate, self-organised action on complex challenges. Those who care most determine what needs to happen — and then make it happen.',steps:['Opening: sponsor sets the theme and invites self-organisation','Participants post session topics on the marketplace wall','Sessions self-organise: whoever shows up are the right people','The law of two feet: if you are not learning or contributing, leave','Closing: What surprised us? What were the big themes?'],tips:['Requires genuine openness from leadership — no hidden agenda','Works best with 20–2000 passionate people','Prepare leadership for the unexpected — that\'s the point'],traps:['Leadership that is not genuinely open to outcomes','Over-scripting the "open" parts of the agenda','Treating it as a one-off event without following up on commitments'],variants:['Half-day mini Open Space for a team of 20','Virtual Open Space with video conferencing breakouts','Annual Open Space as part of a culture change programme'],link:'https://www.liberatingstructures.com/25-open-space-technology/'},
+  26:{purpose:"Strengthen team relationships by analysing the current quality of connections along four dimensions. Creates shared language for intentional relationship-building.",steps:['Introduce the 4 STAR dimensions: Separate/Together, Tuning/Amplifying, Reason/Intuition, Restraining/Enabling','Each team member rates current relationship quality on each dimension','Compare ratings and discuss differences','Identify 1–2 dimensions where a shift would create most value','Create specific experiments to shift the relationship'],tips:['Works best with intact teams of 4–8','The discussion of differences is more valuable than the ratings themselves','Revisit every 3–6 months as a team health check'],traps:['Using ratings competitively rather than curiously','Not converting insights into concrete behavioural experiments','Facilitating it once then forgetting about it'],variants:['Cross-team version: map inter-team relationships','Leadership team version: focus on leadership relationships','Combine with Purpose-To-Practice for new team formation'],link:'https://www.liberatingstructures.com/26-generative-relationships-st/'},
+  27:{purpose:'Navigate complexity by sorting challenges into four domains: simple, complicated, complex and chaotic. Selects the right approach for each type of challenge.',steps:['Introduce the 2x2 matrix: High/Low Certainty x High/Low Agreement','List all current challenges on cards','Place each on the matrix — discuss disagreements','Identify which challenges are in each quadrant','Select appropriate responses: rules / expertise / experiments / crisis action'],tips:['Disagreement about where to place a card = valuable data','The complex quadrant is where most leadership challenges live','Don\'t over-analyse — rough placement is enough to act on'],traps:['Treating all challenges as complicated (= expert-solvable)','Forcing complex issues into simple solutions','Analysis paralysis — the matrix is a starting point, not an answer'],variants:['Use at strategy offsite to sort the initiative portfolio','Regular team meeting: sort this week\'s challenges','Combine with Ecocycle to see what to invest in'],link:'https://www.liberatingstructures.com/27-agreement-certainty-matrix/'},
+  28:{purpose:'Gain direct, unfiltered insight into how work actually happens by going to where the work is done and observing. Prevents ivory-tower decisions based on wrong assumptions.',steps:['Define what you want to understand','Spend 1–6 hours observing in the actual work environment','Take detailed field notes — what do you see, hear, feel?','Look for workarounds, informal practices, unexpected patterns','Debrief with the team: what surprised you?'],tips:['Go with genuine curiosity — suspend judgement','Include front-line workers in the debrief','Repeat across multiple sites for richer patterns'],traps:['Observing with a predetermined conclusion','Not spending enough time (< 1 hour rarely reveals anything)','Forgetting to debrief — data without interpretation is inert'],variants:['Shadow a customer for a day','Leadership immersion: senior leader works alongside front-line','Combine with Celebrity Interview to hear the story behind what you observed'],link:'https://www.liberatingstructures.com/28-simple-ethnography/'},
+  29:{purpose:"Navigate the tension between integration (centralisation, alignment) and autonomy (decentralisation, self-organisation). Find robust both/and solutions instead of either/or compromises.",steps:['Name a current integration/autonomy tension in the organisation','Generate examples of: full integration, full autonomy, hybrid approaches','Identify costs and benefits of each extreme','Find the creative both/and: what can be integrated AND autonomous?','Create specific experiments to test the hybrid'],tips:['Works best when both sides of the tension are genuinely present','The goal is not compromise — it\'s a generative synthesis','Pair with Wicked Questions to name the paradox clearly'],traps:['Settling for compromise instead of genuine synthesis','One side "winning" the argument','Treating it as a one-time decision rather than an ongoing balance'],variants:['Use for remote/in-person work policy design','Apply to decision-making authority in flat organisations','Combine with Min Specs: what must be integrated? What must be autonomous?'],link:'https://www.liberatingstructures.com/29-integrated-autonomy/'},
+  30:{purpose:'Develop robust strategies that work across a range of plausible but unpredictable futures. Builds strategic resilience in the face of genuine uncertainty.',steps:['Identify 2 critical uncertainties (not risks — genuine unknowns)','Create 4 scenario quadrants from the two axes','Name and describe each scenario vividly','Test current strategy against all 4 scenarios','Identify actions that work across all scenarios (= robust strategy)'],tips:['The uncertainties must be genuinely unknowable — not just difficult','Naming scenarios with evocative titles makes them memorable','Robust actions are worth investing in regardless of which future arrives'],traps:['Using risks (probable bad events) instead of genuine uncertainties','Building strategy only for the most likely scenario','Treating scenarios as predictions rather than preparations'],variants:['30-min version: rough scenarios for team planning','Full strategic planning version: 2-day process','Combine with Ecocycle to see which activities are scenario-dependent'],link:'https://www.liberatingstructures.com/30-critical-uncertainties/'},
+  31:{purpose:"Assess the full portfolio of a team's or organisation's activities to identify what to nurture, what to let go of, and what new things to start.",steps:['Map all current activities on the Ecocycle (Birth→Growth→Conservation→Creative Destruction)','Identify activities in each quadrant','Discuss: what is trapped in the Conservation trap? The Poverty trap?','Decide: what to invest in, what to exit, what to birth','Create concrete commitments for each quadrant'],tips:['The Creative Destruction quadrant is the hardest — make it safe to name','Conservation trap = doing the same thing longer hoping for different results','Works brilliantly for annual planning and strategy reviews'],traps:['Only mapping the activities you want to celebrate','Not naming who has authority to move activities between quadrants','Treating the map as permanent — it should be updated regularly'],variants:['Personal Ecocycle: map your own work activities','Career Ecocycle: map your professional portfolio','Combine with Open Space to generate ideas for the Birth quadrant'],link:'https://www.liberatingstructures.com/31-ecocycle-planning/'},
+  32:{purpose:'Understand how systems at different scales (individual, team, organisation, ecosystem) interact and influence each other. Develops systemic thinking and strategic coherence.',steps:['Map three Ecocycles at different scales (e.g. individual, team, sector)','Identify where each is in its cycle','Explore connections: how does each scale influence the others?','Identify leverage points — where small changes have large effects','Design interventions at multiple scales simultaneously'],tips:['Start with Ecocycle Planning to understand it before combining scales','Works best with groups who already have systems-thinking background','Takes 2+ hours — don\'t rush the cross-scale connections'],traps:['Overcomplicating — two scales are enough for most groups','Mistaking the map for reality','Not connecting to concrete action at the end'],variants:['Leadership team: individual + team + organisation scales','Community development: neighbourhood + city + region','Combine with Critical Uncertainties for cross-scale scenario planning'],link:'https://www.liberatingstructures.com/32-panarchy/'},
+  33:{purpose:'Design a new initiative from its deepest purpose all the way to concrete first practices. Builds ownership and coherence across all five structural elements.',steps:['Purpose: Why does this initiative exist? What is the deeper why?','Principles: What are the non-negotiable values and behaviours?','Participants: Who must be involved to succeed?','Structure: How will we organise — roles, meetings, decisions?','Practice: What will we actually DO in the first 90 days?'],tips:['Spend 40% of time on Purpose — everything else follows from it','Invite diverse participants — homogeneity creates blind spots','The five elements are interdependent: revisit earlier ones as later ones clarify'],traps:['Skipping Purpose and starting with Structure','Creating a plan without genuine commitment to the practices','Designing for others instead of with them'],variants:['Half-day version: rapid P2P for a sprint or project','Full version: 2-day offsite for a new organisational initiative','Combine with Design Storyboards to plan the P2P process itself'],link:'https://www.liberatingstructures.com/33-purpose-to-practice-p2p/'}
+};
+
+var lsData = [
+  {n:1, name:'1-2-4-All', tag:'Alle einbeziehen — gleichzeitig', cat:'starter', cx:1, grp:2, time:12, grpLabel:'2–∞', timeLabel:'12 Min.'},
+  {n:2, name:'Impromptu Networking', tag:'Neue Verbindungen — schneller Energizer', cat:'starter', cx:1, grp:6, time:20, grpLabel:'6–∞', timeLabel:'20 Min.'},
+  {n:3, name:'Nine Whys', tag:'Tiefer Sinn und Zweck erkunden', cat:'discovery', cx:1, grp:2, time:20, grpLabel:'2–∞', timeLabel:'20 Min.'},
+  {n:4, name:'Wicked Questions', tag:'Systemische Spannungen benennen', cat:'discovery', cx:2, grp:6, time:25, grpLabel:'6–∞', timeLabel:'25 Min.'},
+  {n:5, name:'Appreciative Interviews', tag:'Stärken & Bestleistungen aufdecken', cat:'discovery', cx:1, grp:4, time:30, grpLabel:'4–∞', timeLabel:'30–60 Min.'},
+  {n:6, name:'TRIZ', tag:'Produktive Destruktion — Platz schaffen', cat:'decision', cx:2, grp:6, time:35, grpLabel:'6–∞', timeLabel:'35 Min.'},
+  {n:7, name:'15% Solutions', tag:'Sofort handeln — kein Budget nötig', cat:'starter', cx:1, grp:2, time:20, grpLabel:'2–∞', timeLabel:'15–20 Min.'},
+  {n:8, name:'Troika Consulting', tag:'Peer Coaching in Dreiergruppen', cat:'peer', cx:1, grp:3, time:30, grpLabel:'3–∞', timeLabel:'15–30 Min.'},
+  {n:9, name:'What, So What, Now What?', tag:'Reflexion und nächste Schritte', cat:'discovery', cx:1, grp:2, time:30, grpLabel:'2–∞', timeLabel:'15–45 Min.'},
+  {n:10, name:'Discovery & Action Dialogue', tag:'Lokale Lösungen aufdecken', cat:'discovery', cx:2, grp:5, time:60, grpLabel:'5–40', timeLabel:'25–70 Min.'},
+  {n:11, name:'Shift & Share', tag:'Wissen dezentral verbreiten', cat:'peer', cx:2, grp:15, time:60, grpLabel:'15–150', timeLabel:'35–90 Min.'},
+  {n:12, name:'25/10 Crowd Sourcing', tag:'Beste Ideen blitzschnell ermitteln', cat:'decision', cx:2, grp:10, time:25, grpLabel:'10–200', timeLabel:'20–30 Min.'},
+  {n:13, name:'Wise Crowds', tag:'Kollektive Intelligenz nutzen', cat:'peer', cx:2, grp:8, time:90, grpLabel:'8–∞', timeLabel:'60+ Min.'},
+  {n:14, name:'Min Specs', tag:'Minimale Regeln — maximale Freiheit', cat:'decision', cx:2, grp:4, time:35, grpLabel:'4–100', timeLabel:'20–50 Min.'},
+  {n:15, name:'Improv Prototyping', tag:'Szenarien spielen — schnell lernen', cat:'empathy', cx:2, grp:6, time:45, grpLabel:'6–100', timeLabel:'30–90 Min.'},
+  {n:16, name:'Helping Heuristics', tag:'Hilfreicher helfen', cat:'empathy', cx:2, grp:2, time:30, grpLabel:'2–∞', timeLabel:'15 Min.'},
+  {n:17, name:'Conversation Café', tag:'Tiefgründige Gespräche ermöglichen', cat:'discovery', cx:1, grp:6, time:45, grpLabel:'6–∞', timeLabel:'35–60 Min.'},
+  {n:18, name:'Users Experience Fishbowl', tag:'Erfahrungen sichtbar teilen', cat:'empathy', cx:2, grp:10, time:45, grpLabel:'10–50', timeLabel:'25–70 Min.'},
+  {n:19, name:'Heard, Seen, Respected', tag:'Empathie und Inklusion üben', cat:'empathy', cx:1, grp:4, time:35, grpLabel:'4–∞', timeLabel:'25 Min.'},
+  {n:20, name:'Drawing Together', tag:'Visuelle Sprache nutzen', cat:'discovery', cx:1, grp:2, time:30, grpLabel:'2–∞', timeLabel:'30–40 Min.'},
+  {n:21, name:'Design StoryBoards', tag:'Workshops kollaborativ planen', cat:'strategy', cx:3, grp:4, time:60, grpLabel:'4–20', timeLabel:'25–70 Min.'},
+  {n:22, name:'Celebrity Interview', tag:'Wissen einer Person öffentlich machen', cat:'peer', cx:1, grp:10, time:40, grpLabel:'10–∞', timeLabel:'25–60 Min.'},
+  {n:23, name:'Social Network Webbing', tag:'Netzwerke sichtbar machen', cat:'strategy', cx:2, grp:10, time:60, grpLabel:'10–150', timeLabel:'45–60 Min.'},
+  {n:24, name:'What I Need From You', tag:'Klare Anfragen formulieren', cat:'decision', cx:2, grp:8, time:55, grpLabel:'8–100', timeLabel:'45–70 Min.'},
+  {n:25, name:'Open Space Technology', tag:'Selbstorganisierter Konferenzraum', cat:'strategy', cx:3, grp:5, time:180, grpLabel:'5–2000', timeLabel:'90 Min.–3 Tage'},
+  {n:26, name:'Generative Relationships STAR', tag:'Teambeziehungen stärken', cat:'strategy', cx:2, grp:4, time:60, grpLabel:'4–8', timeLabel:'25 Min.'},
+  {n:27, name:'Agreement-Certainty Matrix', tag:'Komplexität navigieren (Cynefin)', cat:'complex', cx:3, grp:5, time:40, grpLabel:'5–30', timeLabel:'30–45 Min.'},
+  {n:28, name:'Simple Ethnography', tag:'Vor Ort beobachten', cat:'discovery', cx:2, grp:1, time:120, grpLabel:'1–∞', timeLabel:'1–6 Std.'},
+  {n:29, name:'Integrated~Autonomy', tag:'Zentral vs. Dezentral auflösen', cat:'complex', cx:3, grp:6, time:80, grpLabel:'6–100', timeLabel:'60–80 Min.'},
+  {n:30, name:'Critical Uncertainties', tag:'Robuste Strategien in Unsicherheit', cat:'complex', cx:3, grp:8, time:90, grpLabel:'8–40', timeLabel:'60–100 Min.'},
+  {n:31, name:'Ecocycle Planning', tag:'Portfolio neu bewerten', cat:'complex', cx:3, grp:10, time:90, grpLabel:'10–150', timeLabel:'60–95 Min.'},
+  {n:32, name:'Panarchy', tag:'Systemischen Wandel verstehen', cat:'complex', cx:3, grp:4, time:120, grpLabel:'4–∞', timeLabel:'1–2 Std.'},
+  {n:33, name:'Purpose-To-Practice (P2P)', tag:'Neue Initiative vollständig designen', cat:'strategy', cx:3, grp:10, time:150, grpLabel:'10–100', timeLabel:'25–120 Min.'}
+];
+
+var lsCurrentCat = 'all';
+var lsCurrentSort = 'cat';
+var lsCurrentSearch = '';
+var lsSelectedN = null;
+var lsMMChecked = [];
+
+// Sort / filter / search
+function lsSort(mode, btn) {
+  lsCurrentSort = mode;
+  document.querySelectorAll('#ls-controls .ls-ctrl-btn').forEach(function(b){
+    if(['Kategorie','Komplexität','Dauer','Gruppengrösse'].indexOf(b.textContent) !== -1 ||
+       b.onclick && b.onclick.toString().indexOf('lsSort') !== -1) b.classList.remove('sort-active');
+  });
+  // simpler: remove sort-active from all sort buttons
+  document.querySelectorAll('#ls-controls .ls-ctrl-btn').forEach(function(b){ b.classList.remove('sort-active'); });
+  btn.classList.add('sort-active');
+  lsRender();
+}
+
+function lsFilter(cat, btn) {
+  lsCurrentCat = cat;
+  // remove active from filter buttons only
+  document.querySelectorAll('#ls-controls .ls-ctrl-btn').forEach(function(b){
+    if(b.classList.contains('active')) b.classList.remove('active');
+  });
+  btn.classList.add('active');
+  lsRender();
+}
+
+function lsSearch(val) {
+  lsCurrentSearch = val.toLowerCase();
+  lsRender();
+}
+
+function lsGetSorted() {
+  var list = lsCurrentCat === 'all' ? lsData.slice() : lsData.filter(function(x){ return x.cat === lsCurrentCat; });
+  if (lsCurrentSearch) {
+    list = list.filter(function(x){ return x.name.toLowerCase().indexOf(lsCurrentSearch) !== -1 || x.tag.toLowerCase().indexOf(lsCurrentSearch) !== -1; });
+  }
+  if (lsCurrentSort === 'cx') list.sort(function(a,b){ return a.cx - b.cx; });
+  else if (lsCurrentSort === 'time') list.sort(function(a,b){ return a.time - b.time; });
+  else if (lsCurrentSort === 'group') list.sort(function(a,b){ return a.grp - b.grp; });
+  return list;
+}
+
+function lsRender() {
+  var wrap = document.getElementById('ls-grid-wrap');
+  if (!wrap) return;
+  var list = lsGetSorted();
+  var html = '';
+
+  if (lsCurrentSort === 'cat' && lsCurrentCat === 'all' && !lsCurrentSearch) {
+    Object.keys(lsCatNames).forEach(function(cat) {
+      var items = list.filter(function(x){ return x.cat === cat; });
+      if (!items.length) return;
+      html += '<div class="ls-cat-label" style="color:' + lsCatColors[cat] + '">' + lsCatNames[cat] + '</div><div class="ls-grid">';
+      items.forEach(function(item){ html += lsTileHTML(item); });
+      html += '</div>';
+    });
+  } else {
+    var sortLabel = lsCurrentSort === 'cx' ? 'nach Komplexität' : lsCurrentSort === 'time' ? 'nach Dauer' : lsCurrentSort === 'group' ? 'nach Gruppengrösse' : '';
+    if (sortLabel) html += '<div class="ls-cat-label">' + sortLabel + (lsCurrentCat !== 'all' ? ' · ' + lsCatNames[lsCurrentCat] : '') + ' — ' + list.length + ' Methoden</div>';
+    html += '<div class="ls-grid">';
+    list.forEach(function(item){ html += lsTileHTML(item); });
+    html += '</div>';
+  }
+  wrap.innerHTML = html;
+
+  // Guide
+  var guide = document.getElementById('ls-guide');
+  if (guide) {
+    if (lsSelectedN) {
+      var item = lsData.find(function(x){ return x.n === lsSelectedN; });
+      var g = lsGuides[lsSelectedN];
+      if (item && g) {
+        var cxStars = item.cx === 1 ? '★☆☆ Einfach' : item.cx === 2 ? '★★☆ Mittel' : '★★★ Komplex';
+        guide.className = 'ls-guide open';
+        guide.innerHTML =
+          '<div class="ls-guide-head">' +
+            '<div class="ls-guide-n">' + item.n + '</div>' +
+            '<div style="flex:1">' +
+              '<div class="ls-guide-title">' + item.name + '</div>' +
+              '<div class="ls-guide-meta">' +
+                '<span class="ls-guide-pill">' + lsCatNames[item.cat] + '</span>' +
+                '<span class="ls-guide-pill">' + cxStars + '</span>' +
+                '<span class="ls-guide-pill">Gruppe ' + item.grpLabel + '</span>' +
+                '<span class="ls-guide-pill">' + item.timeLabel + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<span class="ls-guide-close" onclick="lsCloseGuide()">✕</span>' +
+          '</div>' +
+          '<div class="ls-guide-body">' +
+            '<div class="ls-guide-section">' +
+              '<div class="ls-guide-sec-label">Was wird möglich</div>' +
+              '<div class="ls-guide-text">' + g.purpose + '</div>' +
+            '</div>' +
+            '<div class="ls-guide-section">' +
+              '<div class="ls-guide-sec-label">Ablauf</div>' +
+              '<ul class="ls-guide-steps">' + g.steps.map(function(s,i){ return '<li class="ls-guide-step"><span class="ls-guide-step-n">' + (i+1) + '</span><span>' + s + '</span></li>'; }).join('') + '</ul>' +
+            '</div>' +
+            '<div class="ls-guide-section">' +
+              '<div class="ls-guide-sec-label">Tipps & Traps</div>' +
+              '<div class="ls-guide-tips">' +
+                g.tips.map(function(t){ return '<div class="ls-guide-tip">' + t + '</div>'; }).join('') +
+                g.traps.map(function(t){ return '<div class="ls-guide-trap">⚠ ' + t + '</div>'; }).join('') +
+              '</div>' +
+            '</div>' +
+            '<div class="ls-guide-section">' +
+              '<div class="ls-guide-sec-label">Varianten</div>' +
+              '<ul class="ls-guide-steps">' + g.variants.map(function(v,i){ return '<li class="ls-guide-step"><span class="ls-guide-step-n">' + (i+1) + '</span><span>' + v + '</span></li>'; }).join('') + '</ul>' +
+            '</div>' +
+            '<a class="ls-guide-link" href="' + g.link + '" target="_blank">↗ Vollständige Anleitung auf liberatingstructures.com</a>' +
+          '</div>';
+      }
+    } else {
+      guide.className = 'ls-guide';
+      guide.innerHTML = '';
+    }
+  }
+}
+
+function lsTileHTML(item) {
+  var sel = lsSelectedN === item.n ? ' sel' : '';
+  var hl = lsMMChecked.indexOf(item.n) !== -1 ? ' mm-hl' : '';
+  var cxDots = item.cx === 1 ? '★☆☆' : item.cx === 2 ? '★★☆' : '★★★';
+  return '<div class="ls-tile ls-tile-' + item.cat + sel + hl + '" onclick="lsSelectTile(' + item.n + ')">' +
+    '<div class="ls-tile-bar"></div>' +
+    '<div class="ls-tile-num">#' + item.n + ' ' + cxDots + '</div>' +
+    '<div class="ls-tile-name">' + item.name + '</div>' +
+    '<div class="ls-tile-tag">' + item.tag + '</div>' +
+  '</div>';
+}
+
+function lsSelectTile(n) {
+  lsSelectedN = (lsSelectedN === n) ? null : n;
+  lsRender();
+  if (lsSelectedN) {
+    var guide = document.getElementById('ls-guide');
+    if (guide) setTimeout(function(){ guide.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 80);
+  }
+}
+
+function lsCloseGuide() {
+  lsSelectedN = null;
+  lsRender();
+}
+
+// Tab switching
+// Accordion toggle
+function lsToggleAcc(id, header) {
+  var body = document.getElementById('ls-acc-' + id);
+  if (!body) return;
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
+}
+
+// ========== LS DECISION TREE ==========
+var lsDTData = {
+  trust:{icon:'🔐',title:'Vertrauen aufbauen',context:'Neues Team, erstes gemeinsames Meeting, oder Situation nach einem Vertrauensverlust. Ziel: schnell ehrliche Verbindungen schaffen und eine Basis für Zusammenarbeit legen.',methods:[{n:2,prime:true,name:'Impromptu Networking',why:'Erste Begegnungen strukturieren. Alle lernen sich in kurzen Runden kennen — Hierarchie spielt keine Rolle. <strong>Ideal als allererste Aktivität.</strong>'},{n:19,prime:true,name:'Heard, Seen, Respected',why:'Teilen von Momenten, in denen man sich nicht gehört fühlte, schafft <strong>tiefe Empathie und Vertrauen</strong> in sehr kurzer Zeit.'},{n:1,prime:false,name:'1-2-4-All',why:'Erste Fragen gemeinsam bearbeiten — alle kommen zu Wort. Zeigt: jede Stimme zählt.'},{n:5,prime:false,name:'Appreciative Interviews',why:'Stärkenbasierter Einstieg — Paare erzählen von Erfolgen. Positives Fundament für die Beziehung.'}],sequence:['2 — Networking','→','19 — HSR','→','1 — 1-2-4-All','→','5 — Appreciative']},
+  psych:{icon:'🛡️',title:'Psychologische Sicherheit',context:'Das Team äussert keine kritischen Meinungen, vermeidet Konflikte oder teilt keine schlechten Nachrichten. Ziel: sichere Räume für ehrliche Kommunikation schaffen.',methods:[{n:19,prime:true,name:'Heard, Seen, Respected',why:'<strong>Direktester Weg zu psychologischer Sicherheit.</strong> Normalisiert Verletzlichkeit — auch für Führungskräfte.'},{n:8,prime:true,name:'Troika Consulting',why:'Peer-Coaching ohne Hierarchie. <strong>Übt den Muskel "Unsicherheit zeigen".</strong>'},{n:4,prime:false,name:'Wicked Questions',why:'Paradoxe Fragen normalisieren, dass es keine einfachen Antworten gibt. Reduziert Angst vor "falschen" Antworten.'},{n:15,prime:false,name:'Improv Prototyping',why:'Scheitern ist hier explizit Teil des Designs. Baut Toleranz für Fehler auf.'}],sequence:['19 — HSR','→','8 — Troika','→','4 — Wicked Qs','→','15 — Improv']},
+  vision:{icon:'🧭',title:'Vision & Purpose klären',context:'Team oder Organisation fragt sich: Warum machen wir das eigentlich? Orientierung fehlt, oder eine neue Richtung soll gemeinsam entwickelt werden.',methods:[{n:3,prime:true,name:'Nine Whys',why:'<strong>Der direkteste Weg zum tieferen Sinn.</strong> Durch Wiederholung von "Warum?" entsteht Klarheit über Motivation und Zweck.'},{n:33,prime:true,name:'Purpose-To-Practice (P2P)',why:'Vollständiges Framework: von Purpose über Prinzipien bis zur konkreten Praxis. <strong>Für neue Initiativen oder Teamneustart.</strong>'},{n:4,prime:false,name:'Wicked Questions',why:'Spannungen zwischen "Stabilität und Wandel" konstruktiv benennen.'},{n:14,prime:false,name:'Min Specs',why:'Was sind die absolut nicht-verhandelbaren Prinzipien? Destilliert den Kern des Purpose.'}],sequence:['3 — Nine Whys','→','4 — Wicked Qs','→','14 — Min Specs','→','33 — P2P']},
+  conflict:{icon:'⚡',title:'Konflikte & Spannungen',context:'Unausgesprochenes dominiert Meetings, es gibt "Elefanten im Raum", oder strukturelle Konflikte zwischen Teams werden vermieden statt angesprochen.',methods:[{n:6,prime:true,name:'TRIZ',why:'<strong>Der mutigste Einstieg in schwierige Themen.</strong> Was tun wir, um alles zu ruinieren? — kehrt Tabuthemen um und macht sie besprechbar.'},{n:24,prime:true,name:'What I Need From You',why:'Klärung von gegenseitigen Erwartungen zwischen Teams. <strong>Direkt, strukturiert, ohne Eskalation.</strong>'},{n:4,prime:false,name:'Wicked Questions',why:'Benennt paradoxe Spannungen explizit — gibt ihnen Legitimität, ohne einen "Gewinner" zu brauchen.'},{n:29,prime:false,name:'Integrated~Autonomy',why:'Für strukturelle Konflikte zwischen zentraler Steuerung und dezentraler Freiheit.'}],sequence:['6 — TRIZ','→','4 — Wicked Qs','→','24 — WINFY','→','1 — 1-2-4-All']},
+  innovation:{icon:'💡',title:'Innovation & Ideen',context:'Das Team soll kreative Lösungen entwickeln. Konventionelles Brainstorming hat nicht funktioniert.',methods:[{n:1,prime:true,name:'1-2-4-All',why:'<strong>Überlegener Ersatz für klassisches Brainstorming.</strong> Alle denken gleichzeitig — keine Dominanz, keine Groupthink-Falle.'},{n:12,prime:true,name:'25/10 Crowd Sourcing',why:'Aus vielen Ideen die stärksten ermitteln — <strong>in unter 30 Minuten, auch mit 200 Personen.</strong>'},{n:7,prime:false,name:'15% Solutions',why:'Was ist heute machbar, ohne Erlaubnis? Senkt die Hemmschwelle für erste Schritte extrem.'},{n:15,prime:false,name:'Improv Prototyping',why:'Ideen sofort körperlich erproben — Prototypen spielen statt beschreiben.'}],sequence:['2 — Networking','→','1 — 1-2-4-All','→','12 — 25/10','→','7 — 15% Solutions']},
+  decision:{icon:'✅',title:'Entscheidungen & Prioritäten',context:'Es gibt zu viele Optionen, keine Einigung, oder Entscheidungen werden nur formell getroffen aber nicht getragen.',methods:[{n:12,prime:true,name:'25/10 Crowd Sourcing',why:'<strong>Schnelles Priorisieren aus vielen Optionen.</strong> Transparenter Prozess — Ergebnis ist kollektiv legitimiert.'},{n:14,prime:true,name:'Min Specs',why:'Destilliert die absolut notwendigen Kriterien. <strong>Klärt, was wirklich Pflicht ist und was Kür.</strong>'},{n:6,prime:false,name:'TRIZ',why:'Welche Entscheidungen würden uns garantiert scheitern lassen? Schärft die Urteilskraft.'},{n:27,prime:false,name:'Agreement-Certainty Matrix',why:'Wo sind wir uns einig? Wo herrscht Unsicherheit? Klärt den Typ der Entscheidung.'}],sequence:['27 — Matrix','→','6 — TRIZ','→','1 — 1-2-4-All','→','12 — 25/10','→','14 — Min Specs']},
+  feedback:{icon:'🔄',title:'Feedback & Reflexion',context:'Nach einem Projekt, Training, Event oder einer intensiven Phase: was haben wir gelernt?',methods:[{n:9,prime:true,name:'What, So What, Now What?',why:'<strong>Strukturierteste Reflexionsmethode.</strong> Was passierte → Bedeutung → Konsequenz. Verhindert, dass Erkenntnisse verpuffen.'},{n:8,prime:true,name:'Troika Consulting',why:'Peer Coaching zu konkreten Herausforderungen. <strong>Macht Feedback zu einem ressourcenorientierten Gespräch.</strong>'},{n:13,prime:false,name:'Wise Crowds',why:'Tieferes Einzel-Feedback in Gruppenformat — für komplexe, persönliche Herausforderungen.'},{n:5,prime:false,name:'Appreciative Interviews',why:'Was lief gut? Stärkenbasierte Reflexion als Gegengewicht zur reinen Fehleranalyse.'}],sequence:['9 — W³','→','5 — Appreciative','→','8 — Troika','→','7 — 15% Solutions']},
+  change:{icon:'🌀',title:'Veränderung & Transformation',context:'Restrukturierung, neues Führungsteam, Kulturwandel oder strategische Neuausrichtung. Ziel: alle mitnehmen, Widerstand produktiv nutzen, Ownership aufbauen.',methods:[{n:10,prime:true,name:'Discovery & Action Dialogue',why:'<strong>Findet Lösungen, die bereits im System existieren</strong> — unsichtbar geblieben. Positive Abweicher werden zum Vorbild.'},{n:31,prime:true,name:'Ecocycle Planning',why:'Was soll wachsen, was loslassen, was neu starten? <strong>Kollektive Portfolio-Bewertung</strong> — ideal für Jahresplanung in Veränderungsphasen.'},{n:23,prime:false,name:'Social Network Webbing',why:'Netzwerke visualisieren — wer sind die Change Agents, wo sind Brücken, wo Lücken?'},{n:25,prime:false,name:'Open Space Technology',why:'Für grosse Transformationsprozesse: alle setzen die Agenda. Maximale Eigenverantwortung.'}],sequence:['10 — DAD','→','23 — Network','→','31 — Ecocycle','→','25 — Open Space']}
+};
+
+function lsDT(scenario, btn) {
+  document.querySelectorAll('.ls-dt-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var d = lsDTData[scenario];
+  var result = document.getElementById('ls-dt-result');
+  if (!result) return;
+  var methodCards = d.methods.map(function(m){
+    var cls = m.prime ? ' prime' : '';
+    var rank = m.prime ? '⭐ Empfohlen' : 'Ergänzend';
+    return '<div class="ls-dt-mc' + cls + '" onclick="lsSelectTile(' + m.n + ')">' +
+      '<div class="ls-dt-mc-rank">' + rank + '</div>' +
+      '<div class="ls-dt-mc-name">#' + m.n + ' — ' + m.name + '</div>' +
+      '<div class="ls-dt-mc-why">' + m.why + '</div>' +
+    '</div>';
+  }).join('');
+  var seqHTML = d.sequence.map(function(s){ return s === '→' ? '<span class="ls-dt-seq-arrow">→</span>' : '<span class="ls-dt-seq-step">' + s + '</span>'; }).join('');
+  result.className = 'ls-dt-result open';
+  result.innerHTML =
+    '<div class="ls-dt-context"><strong>' + d.icon + ' ' + d.title + '</strong><br>' + d.context + '</div>' +
+    '<div style="font-family:\'Syne\',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:14px;height:1px;background:currentColor;"></span>Empfohlene Methoden — klicke für Anleitung</div>' +
+    '<div class="ls-dt-method-cards">' + methodCards + '</div>' +
+    '<div class="ls-dt-sequence"><span class="ls-dt-seq-label">String:</span>' + seqHTML + '</div>';
+}
+
+// ========== LS SELECTION MATCHMAKER ==========
+var lsMMObjectives = [
+  'Rapidly share challenges & expectations while building new connections',
+  'Make the purpose of your work together clear',
+  'Together, look back on progress and decide what adjustments are needed',
+  'Stop counterproductive activities & behaviors to make space for innovation',
+  'Discover & build on the root causes of success',
+  'Engage everyone simultaneously in generating questions, ideas, suggestions',
+  'Share know-how gained from experience with a larger community',
+  'Discover & focus on what each person has the freedom and resources to do now',
+  'Rapidly generate & sift the group\'s most powerful actionable ideas',
+  'Get practical and imaginative help from colleagues immediately',
+  'Engage everyone in making sense of profound challenges',
+  'Specify only the absolute "Must do\'s" & "Must not do\'s" for achieving a purpose',
+  'Tap the wisdom of the whole group in rapid cycles',
+  'Articulate the paradoxical challenges that a group must confront to succeed',
+  'Reveal insights and paths forward through non-verbal expression',
+  'Develop effective solutions to chronic challenges while having serious fun',
+  'Sort challenges into simple, complicated and complex categories',
+  'Spread good ideas and make informal connections with innovators',
+  'Practice deeper listening and empathy with colleagues',
+  'Map informal connections and decide how to strengthen the network',
+  'Define the step-by-step design elements for bringing initiatives to productive endpoints',
+  'Liberate inherent action and leadership in large groups',
+  'Discover, spark and unleash local solutions to chronic problems',
+  'Move from either-or to robust both-and solutions',
+  'Reveal and understand relationship patterns that create value or dysfunctions',
+  'Develop strategies for successfully operating in a range of plausible yet unpredictable futures',
+  'Define the 5 elements that are essential for a resilient & enduring initiative',
+  'Analyze the full portfolio of activities & relationships to identify obstacles & opportunities',
+  'Understand how embedded systems interact, evolve and influence the spread of innovation',
+  'Surface most essential needs across functions and accept or reject requests for support',
+  'Reconnect the experience of leaders and experts with people closest to the challenge',
+  'Practice progressive methods for helping others, receiving help and asking for help',
+  'Observe and record actual behaviors of users in the field'
+];
+
+function lsMMRender() {
+  var wrap = document.getElementById('ls-mm-objectives');
+  if (!wrap) return;
+  wrap.innerHTML = lsMMObjectives.map(function(obj, i) {
+    var n = i + 1;
+    var checked = lsMMChecked.indexOf(n) !== -1 ? ' checked' : '';
+    return '<div class="ls-mm-obj' + checked + '" onclick="lsMMToggle(' + n + ')">' +
+      '<div class="ls-mm-obj-num">' + n + '</div>' +
+      '<div class="ls-mm-obj-text">' + obj + '</div>' +
+    '</div>';
+  }).join('');
+  lsMMUpdateResult();
+}
+
+function lsMMToggle(n) {
+  var idx = lsMMChecked.indexOf(n);
+  if (idx === -1) { lsMMChecked.push(n); } else { lsMMChecked.splice(idx, 1); }
+  lsMMRender();
+  lsRender(); // update tile highlighting
+}
+
+function lsMMClear() {
+  lsMMChecked = [];
+  lsMMRender();
+  lsRender();
+}
+
+function lsMMUpdateResult() {
+  var countEl = document.getElementById('ls-mm-count');
+  var result = document.getElementById('ls-mm-result');
+  var stringEl = document.getElementById('ls-mm-string');
+  if (!countEl || !result) return;
+  var n = lsMMChecked.length;
+  countEl.innerHTML = '<span>' + n + '</span> Ziel' + (n === 1 ? '' : 'e') + ' ausgewählt' + (n > 7 ? ' — <em>ideal 3–7</em>' : '');
+  if (n === 0) { result.className = 'ls-mm-result'; return; }
+  result.className = 'ls-mm-result open';
+  var sorted = lsMMChecked.slice().sort(function(a,b){ return a - b; });
+  stringEl.innerHTML = sorted.map(function(num) {
+    var item = lsData.find(function(x){ return x.n === num; });
+    var name = item ? item.name : '#' + num;
+    return '<span class="ls-mm-method-pill" onclick="lsMMJump(' + num + ')" title="#' + num + ' — ' + name + '">#' + num + ' ' + name + '</span>';
+  }).join('<span style="color:var(--muted);font-size:11px;">→</span>');
+}
+
+function lsMMJump(n) {
+  lsSelectedN = n;
+  lsRender();
+  // scroll to guide
+  var guide = document.getElementById('ls-guide');
+  if (guide) setTimeout(function(){ guide.scrollIntoView({behavior:'smooth',block:'start'}); }, 100);
+}
+
+
 
 function toggleKirk(tile) {
   var isOpen = tile.classList.contains('open');
@@ -5684,6 +6631,7 @@ var pageTitles_de = {
   s6: 'Zielgruppen-Pfade', s7: 'Build vs. Buy', s8: 'Kommunikation',
   s9: 'Kirkpatrick', s10: 'KPIs tracken', s11: 'Feedback-Loop',
   s12: 'Lernkultur', p1: 'Programme & Trainings', p2: 'Coaching & Workshops', bestpractice: 'Best Practices',
+  teamdynamik: 'Teamdynamik & Psych. Sicherheit', ls: 'Liberating Structures',
   p3: 'eLearning & Learning Management System (LMS)', p4: 'Live Trainings', p5: 'Compliance & Projektmanagement (PM)',
   usecases: 'Use Cases', decisiontree: 'Decision Tree',
   research: 'Research & Neuro', methoden: 'Lernmethoden', glossar: 'Glossar', resources: 'Quellen'
