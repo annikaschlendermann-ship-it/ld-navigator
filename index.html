@@ -1983,6 +1983,105 @@
   .ac-great-label { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--phase2); margin-bottom: 7px; }
   .ac-good-content, .ac-great-content { color: rgba(232,234,240,0.72); }
 
+  /* CHANGE MANAGEMENT PAGE */
+  .cm-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px;
+    border-radius: 20px; margin-bottom: 20px;
+    background: rgba(245,158,11,0.1); color: #f59e0b;
+    border: 1px solid rgba(245,158,11,0.25);
+  }
+
+  .cm-intro {
+    background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+    font-size: 14px; line-height: 1.75; color: rgba(232,234,240,0.8);
+  }
+  .cm-intro strong { color: #f59e0b; font-weight: 500; }
+
+  .cialdini-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px;
+  }
+  @media (max-width: 768px) { .cialdini-grid { grid-template-columns: 1fr; } }
+
+  .cialdini-tile {
+    border-radius: 14px; border: 1px solid var(--border);
+    overflow: hidden; cursor: pointer; transition: all 0.18s;
+    background: var(--surface);
+  }
+  .cialdini-tile:hover { border-color: var(--border-active); transform: translateY(-2px); }
+  .cialdini-tile.open { grid-column: 1 / -1; border-color: rgba(245,158,11,0.4); transform: none; }
+  @media (max-width: 768px) { .cialdini-tile.open { grid-column: 1; } }
+
+  .cialdini-tile-header { padding: 20px 22px 16px; display: flex; align-items: flex-start; gap: 14px; }
+
+  .cialdini-num {
+    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800;
+    color: #f59e0b; flex-shrink: 0; min-width: 26px; padding-top: 1px;
+  }
+
+  .cialdini-name {
+    font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .cialdini-principle { font-size: 12.5px; color: var(--muted); line-height: 1.45; flex: 1; }
+  .cialdini-chevron { color: var(--muted); font-size: 11px; transition: transform 0.2s; flex-shrink: 0; margin-top: 4px; }
+  .cialdini-tile.open .cialdini-chevron { transform: rotate(180deg); }
+
+  .cialdini-tile-body { display: none; padding: 0 22px 22px 62px; border-top: 1px solid var(--border); }
+  .cialdini-tile.open .cialdini-tile-body { display: block; }
+  @media (max-width: 768px) { .cialdini-tile-body { padding: 0 16px 18px 16px; } }
+
+  .cialdini-ld {
+    font-size: 13.5px; line-height: 1.75; color: rgba(232,234,240,0.75); margin: 14px 0 12px;
+  }
+  .cialdini-ld strong { color: var(--text); font-weight: 500; }
+
+  .cialdini-example {
+    background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 10px; padding: 14px 18px; margin-top: 10px;
+  }
+  .cialdini-example-label {
+    font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: #f59e0b; margin-bottom: 7px;
+  }
+  .cialdini-example-text { font-size: 13px; line-height: 1.65; color: rgba(232,234,240,0.72); }
+  .cialdini-example-text strong { color: var(--text); font-weight: 500; }
+
+  .cialdini-warning {
+    background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.18);
+    border-radius: 8px; padding: 10px 14px; margin-top: 10px;
+    font-size: 12.5px; color: rgba(248,113,113,0.8); line-height: 1.55;
+  }
+  .cialdini-warning::before { content: '&#9888; '; font-weight: 700; }
+
+  .cm-mapping {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px; margin-top: 8px;
+  }
+  .cm-mapping-title {
+    font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+    color: var(--text); margin-bottom: 16px;
+  }
+  .cm-mapping-row {
+    display: grid; grid-template-columns: 110px 1fr 1fr; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+    font-size: 13px; align-items: start;
+  }
+  .cm-mapping-row:last-child { border-bottom: none; }
+  .cm-mapping-header {
+    font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  }
+  .cm-lever { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: #f59e0b; }
+  .cm-relevance { color: rgba(232,234,240,0.72); line-height: 1.5; }
+  .cm-tactic { color: rgba(232,234,240,0.55); font-size: 12.5px; line-height: 1.5; font-style: italic; }
+  @media (max-width: 600px) {
+    .cm-mapping-row { grid-template-columns: 1fr; gap: 4px; }
+    .cm-tactic { display: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -2075,6 +2174,9 @@
       <div class="phase-label" style="color:#f59e0b;">Interview & Assessment</div>
       <div class="nav-item" onclick="showPage('assessment')" id="nav-assessment" style="color:var(--muted)">
         <span class="nav-num" style="background:rgba(245,158,11,0.12);color:#f59e0b;">AC</span> Assessment Center
+      </div>
+      <div class="nav-item" onclick="showPage('change')" id="nav-change" style="color:var(--muted)">
+        <span class="nav-num" style="background:rgba(245,158,11,0.12);color:#f59e0b;">CM</span> Change Management
       </div>
     </div>
 
@@ -2446,61 +2548,143 @@ const pages = {
     <div class="page">
       <div class="content-header">
         <div class="phase-badge p2">Phase 2 · Designen</div>
-        <div class="step-title">Programme nach<br>70-20-10 designen</div>
-        <div class="step-tagline">Nicht alles ist ein Kurs. Das 70-20-10-Modell verhindert, dass L&D zur Kurs-Fabrik wird.</div>
+        <div class="step-title">Programmarchitektur<br>& didaktisches Design</div>
+        <div class="step-tagline">Von der Lernstrategie zur konkreten Programmstruktur — Modelle, Prinzipien und Designentscheidungen die den Unterschied machen.</div>
       </div>
       <div class="content-body">
+
         <div class="info-card">
-          <div class="card-label">Das Modell</div>
-          <div class="card-title">70-20-10: Was es bedeutet</div>
-          <div class="card-text">
-            <strong>70%</strong> — Informelles Lernen on-the-job: Stretch Assignments, neue Projekte, Job Rotation, echte Problemlösung im Alltag.<br><br>
-            <strong>20%</strong> — Soziales Lernen: Coaching, Mentoring, Peer-Learning, Communities of Practice, Feedback-Gespräche.<br><br>
-            <strong>10%</strong> — Formales Training: Workshops, E-Learning, Zertifizierungen, Seminare.<br><br>
-            Die meisten L&D-Abteilungen verbringen 90% ihrer Zeit mit dem 10%-Anteil. Best-Practice dreht dieses Verhältnis.
-          </div>
-          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>83% Konfidenz — Modell ist gut etabliert, genaue Zahlen sind Näherungswerte</div>
+          <div class="card-label">Grundprinzip</div>
+          <div class="card-title">Design beginnt mit dem Ende</div>
+          <div class="card-text">Backward Design (Wiggins & McTighe): Zuerst definieren was am Ende anders sein soll — welches Verhalten, welche Kompetenz, welches Ergebnis. Dann erst die Lernwege dorthin designen. Dieser Ansatz verhindert das häufigste Designfehler: zu viel Inhalt, zu wenig Anwendung.</div>
+          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>89% Konfidenz — starke empirische Basis, breiter Konsens in der ID-Forschung</div>
         </div>
 
         <div class="substeps-grid">
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">70% — On-the-job gestalten</div>
-            <div class="substep-preview">Lernen im echten Kontext</div>
+            <div class="substep-title">70-20-10 Modell — korrekt angewendet</div>
+            <div class="substep-preview">Die Quelle des Missverständnisses</div>
             <div class="substep-detail">
-              <p>Konkrete Massnahmen für den 70%-Anteil: Stretch Assignments (Aufgaben leicht über dem aktuellen Können), Projektleitung für unerfahrene Personen, Job Rotation zwischen Abteilungen, Hospitationen.</p>
-              <p>L&D-Rolle hier: Rahmenbedingungen schaffen, nicht Inhalte liefern. Führungskräfte als Lernbegleiter befähigen.</p>
+              <p>Das 70-20-10-Modell (Center for Creative Leadership (CCL), McCall et al.) beschreibt <em>wie</em> Führungskräfte sagten, gelernt zu haben — es ist keine Designvorschrift. <strong>Korrekte Anwendung:</strong> Als Planungsrahmen für die Lernarchitektur, nicht als starre Quotenvorgabe.</p>
+              <p><strong>70% On-the-job:</strong> Stretch Assignments, neue Projekte, Rotation, Job Shadowing, Fehler machen dürfen. L&D-Aufgabe: diese Erfahrungen strukturieren, sichtbar machen, mit Reflexion verknüpfen.</p>
+              <p><strong>20% Social Learning:</strong> Mentoring, Peer Learning, Communities of Practice (CoP), Coaching, Feedback. L&D-Aufgabe: Räume und Strukturen schaffen, nicht Inhalte liefern.</p>
+              <p><strong>10% Formales Training:</strong> Kurse, Workshops, eLearning. L&D-Aufgabe: diesen 10% maximale Qualität geben — Relevanz, Anwendbarkeit, Transfer-Vorbereitung.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>85% Konfidenz — das Modell ist deskriptiv, nicht präskriptiv; Zahlen sind Richtwerte</div>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">20% — Social Learning</div>
-            <div class="substep-preview">Voneinander, miteinander</div>
+            <div class="substep-title">Bloom's Taxonomy — Lernziele richtig schreiben</div>
+            <div class="substep-preview">Vom Erinnern zum Erschaffen</div>
             <div class="substep-detail">
-              <p>Mentoring-Programme (formell und informell), Coaching durch interne oder externe Coaches, Peer-Learning-Gruppen, Communities of Practice zu spezifischen Themen.</p>
-              <p>Besonders wirksam: <strong>Internal Expert Talks</strong> — eigene High Performer teilen ihr Wissen strukturiert mit Kollegen. Skaliert gut und stärkt gleichzeitig die Lernkultur.</p>
+              <p>Bloom's Taxonomy (revidiert: Anderson & Krathwohl 2001) ordnet kognitive Lernziele in sechs Stufen. <strong>Für L&D entscheidend:</strong> Die meisten Trainings zielen auf Level 1–2 (Erinnern, Verstehen), obwohl der Business-Bedarf oft Level 3–6 erfordert.</p>
+              <p><strong>Level 1 — Erinnern:</strong> "Nennen Sie die vier Schritte..." → Wissenstest, Multiple Choice</p>
+              <p><strong>Level 2 — Verstehen:</strong> "Erklären Sie den Unterschied zwischen..." → Fallbeispiel-Diskussion</p>
+              <p><strong>Level 3 — Anwenden:</strong> "Führen Sie das Gespräch durch..." → Rollenspiel, Simulation</p>
+              <p><strong>Level 4 — Analysieren:</strong> "Identifizieren Sie das Kernproblem..." → Case Study, Fallanalyse</p>
+              <p><strong>Level 5 — Bewerten:</strong> "Beurteilen Sie die beste Option..." → Entscheidungsszenarien</p>
+              <p><strong>Level 6 — Erschaffen:</strong> "Entwickeln Sie einen Plan..." → Projektaufgaben, Transfer-Assignment</p>
+              <p><strong>Praktische Regel:</strong> Lernziele mit Aktionsverben formulieren: Nicht "Teilnehmende kennen X" sondern "Teilnehmende können X anwenden um Y zu erreichen".</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">10% — Formales Training</div>
-            <div class="substep-preview">Gezielte, strukturierte Wissensvermittlung</div>
+            <div class="substep-title">Gagné's Nine Events of Instruction</div>
+            <div class="substep-preview">Der Blaupause für jede Lerneinheit</div>
             <div class="substep-detail">
-              <p>Formales Training ist sinnvoll für: Compliance-Themen, neue Tools/Prozesse, Onboarding, spezialisiertes Fachwissen, Zertifizierungen.</p>
-              <p>Best-Practice: Vor dem Training klares Lernziel definieren ("Nach diesem Training können Teilnehmende X tun"), nach dem Training Anwendung im Job einplanen und follow-up.</p>
+              <p>Robert Gagné's 9 Lehr-Ereignisse (1965, bis heute wissenschaftlich validiert) bieten eine Sequenz für jede Lerneinheit — von Modulen bis zu einzelnen Workshops.</p>
+              <p><strong>1. Aufmerksamkeit gewinnen:</strong> Mit einer überraschenden Frage, einem Praxisproblem oder einer Provocations starten — nie mit der Agenda.</p>
+              <p><strong>2. Lernziele kommunizieren:</strong> "Am Ende kannst du..." — explizit, konkret, relevant.</p>
+              <p><strong>3. Vorwissen aktivieren:</strong> Was wissen die Lernenden schon? Anknüpfungspunkte schaffen.</p>
+              <p><strong>4. Neuen Inhalt präsentieren:</strong> Portioniert, mit Beispielen, multimodal (Text + Bild + Audio).</p>
+              <p><strong>5. Lernleitfaden geben:</strong> Strukturierungshilfen, Eselsbrücken, Beispiele zeigen wie es aussieht.</p>
+              <p><strong>6. Übung ermöglichen:</strong> Aktives Tun — nicht zuhören. Übungsaufgaben, Rollenspiele, Simulationen.</p>
+              <p><strong>7. Feedback geben:</strong> Unmittelbar, spezifisch, entwicklungsorientiert.</p>
+              <p><strong>8. Leistung beurteilen:</strong> Assessment das Level 3–6 (Bloom) fordert — kein reiner Wissenstest.</p>
+              <p><strong>9. Transfer sichern:</strong> Explizite Verbindung zur Arbeitspraxis: "Was wirst du in den nächsten 30 Tagen konkret anders machen?"</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>91% Konfidenz — jahrzehntelang validiertes Framework, breiter wissenschaftlicher Konsens</div>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Programme integrieren</div>
-            <div class="substep-preview">Kein Silo-Training</div>
+            <div class="substep-title">Merrill's First Principles of Instruction</div>
+            <div class="substep-preview">Problemzentriertes Lernen als Kern</div>
             <div class="substep-detail">
-              <p>Das Wichtigste: Die drei Säulen müssen miteinander verbunden sein. Ein Workshop (10%) sollte immer von einer Job-Aufgabe (70%) und einer Reflexionsrunde mit Peers (20%) begleitet werden.</p>
-              <p>Programme, die neue Skills in einen breiteren Arbeitskontext einbetten, sind nachweislich erfolgreicher als isolierte Trainings.</p>
-              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>83% Konfidenz — Academy to Innovate HR (AIHR) Research-Basis</div>
+              <p>David Merrill's "First Principles" (2002) sind die destillierten Gemeinsamkeiten aller effektiven Lerndesign-Theorien — wissenschaftlich als besonders lernwirksam bestätigt.</p>
+              <p><strong>1. Problem-Centered:</strong> Lernen findet am effektivsten statt wenn es um echte, relevante Probleme geht — kein abstraktes Wissen ohne Kontext.</p>
+              <p><strong>2. Activation:</strong> Vorwissen aktivieren, an bestehende mentale Modelle anknüpfen, eigene Erfahrungen nutzen.</p>
+              <p><strong>3. Demonstration:</strong> Zeigen statt erzählen — konkrete Beispiele, Modellierungen, "so sieht es aus".</p>
+              <p><strong>4. Application:</strong> Anwenden mit abnehmendem Coaching-Anteil — zunächst mit Hilfe, dann allein.</p>
+              <p><strong>5. Integration:</strong> Neues Wissen in die Arbeitspraxis integrieren — Reflexion, Peer-Diskussion, Portfolio.</p>
+              <p><strong>Design-Implikation:</strong> Jede Lerneinheit sollte ein echtes Problem präsentieren, an dem alle fünf Phasen durchlaufen werden. Das erhöht Transfer und Motivation gleichzeitig.</p>
             </div>
           </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Mayer's Multimedia-Prinzipien</div>
+            <div class="substep-preview">Wie das Gehirn multimediale Inhalte verarbeitet</div>
+            <div class="substep-detail">
+              <p>Richard Mayer's Cognitive Theory of Multimedia Learning definiert evidenzbasierte Gestaltungsregeln für Lernmaterial. Besonders relevant für eLearning-Design.</p>
+              <p><strong>Coherence-Prinzip:</strong> Weniger ist mehr — irrelevante Bilder, Texte und Töne reduzieren das Lernen. Jedes Element muss die Kernaussage unterstützen.</p>
+              <p><strong>Signaling-Prinzip:</strong> Wichtige Elemente hervorheben (Farbe, Pfeile, Überschriften) — das Gehirn braucht Orientierung.</p>
+              <p><strong>Redundancy-Prinzip:</strong> Nicht denselben Text gleichzeitig laut vorlesen UND anzeigen. Das überlastet den auditiven Kanal.</p>
+              <p><strong>Spatial Contiguity:</strong> Zugehörige Wörter und Bilder räumlich nah platzieren — nicht Text oben, Bild unten.</p>
+              <p><strong>Temporal Contiguity:</strong> Wörter und zugehörige Bilder gleichzeitig zeigen, nicht nacheinander.</p>
+              <p><strong>Modality-Prinzip:</strong> Gesprochener Text + Bilder > geschriebener Text + Bilder (wenn beide gut designt sind).</p>
+              <p><strong>Segmenting-Prinzip:</strong> Lernende selbst bestimmen lassen wann sie weitergehen — kein erzwungenes Tempo.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>88% Konfidenz — empirisch gut belegt, besonders für eLearning-Design</div>
+            </div>
+          </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Blended Learning — Architektur richtig designen</div>
+            <div class="substep-preview">Mehr als "Präsenz + eLearning"</div>
+            <div class="substep-detail">
+              <p>Blended Learning ist keine zufällige Mischung von Formaten — es ist eine <em>bewusste Architektur</em> bei der jedes Format das tut, was es am besten kann.</p>
+              <p><strong>Asynchron (digital, on-demand):</strong> Wissensvermittlung, Begriffsklärung, Vorbereitungsmaterial, Spaced-Repetition-Tests. Lernende kontrollieren Tempo.</p>
+              <p><strong>Synchron (live, Gruppe):</strong> Diskussion, Anwendung, Perspektivwechsel, Feedback, Peer Learning. Was echte Interaktion braucht.</p>
+              <p><strong>Flipped Classroom-Prinzip anwenden:</strong> Input digital (vor dem Treffen), Präsenz für Anwendung und Tiefe — nicht für Frontalvortrag.</p>
+              <p><strong>Typische Blended-Sequenz:</strong><br>
+              → Pre-Work (Video/Artikel, 20–30 Min.) 3 Tage vor dem Termin<br>
+              → Live-Session (Workshop, 90–180 Min.) mit voller Diskussion und Übung<br>
+              → Post-Work (Anwendungsaufgabe, Transfer-Commitment, 30-Tage-Check-in)<br>
+              → Spaced Retrieval (3 kurze Quizfragen nach 7, 30, 90 Tagen)</p>
+              <p><strong>Häufigster Fehler:</strong> eLearning als "Pflichtmodul davor" statt als echte Vorbereitung — Lernende schauen es an ohne es wirklich zu verarbeiten. Lösung: Pre-Work-Aufgabe die in der Live-Session direkt verwendet wird.</p>
+            </div>
+          </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Universal Design for Learning (UDL)</div>
+            <div class="substep-preview">Inklusive Lerndesign-Prinzipien</div>
+            <div class="substep-detail">
+              <p>Universal Design for Learning (UDL) (CAST, 1984) ist ein evidenzbasierter Rahmen der Lerndesign von Anfang an inklusiv macht — nicht als Nachgedanke.</p>
+              <p><strong>Drei UDL-Prinzipien:</strong></p>
+              <p><strong>1. Multiple Means of Representation (Das "Was" des Lernens):</strong> Inhalte in verschiedenen Formaten anbieten — Text, Audio, Video, Grafik. Untertitel, Transkripte, Kontrast.</p>
+              <p><strong>2. Multiple Means of Action & Expression (Das "Wie" des Lernens):</strong> Verschiedene Wege erlauben um Wissen zu zeigen — nicht nur schriftlicher Test. Essay, Präsentation, Simulation, Gespräch.</p>
+              <p><strong>3. Multiple Means of Engagement (Das "Warum" des Lernens):</strong> Verschiedene Motivationsanker — Relevanz, Autonomie, Zusammenarbeit, Herausforderungsgrad.</p>
+              <p><strong>Praktische Minimalstandards:</strong> Alle Videos haben Untertitel. PDFs sind screen-reader-fähig. Farbe ist nie das einzige Unterscheidungsmerkmal. Schriftgrösse min. 14pt.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>87% Konfidenz — stark in der Forschung verankert, zunehmend regulatorisch relevant</div>
+            </div>
+          </div>
+
         </div>
+
+        <div class="questions-box">
+          <div class="questions-title">Design-Checkliste vor dem Build</div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Lernziele auf Bloom Level 3–6 formuliert (Anwenden, Analysieren, Bewerten, Erschaffen)?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Backward Design angewendet — erst Endzustand, dann Lernweg definiert?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>70-20-10 im Blick — liegt genug Gewicht auf On-the-job und Social Learning?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Transfer-Sicherung eingeplant — was passiert 30/60/90 Tage nach dem Training?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Gagné Event 9 eingebaut — explizite Verbindung zur Arbeitspraxis am Ende?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Mayer's Redundancy-Prinzip beachtet — kein doppelter Text in eLearning?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Universal Design for Learning (UDL)-Minimalstandards erfüllt — Untertitel, Kontrast, Zugänglichkeit?</span></div>
+        </div>
+
       </div>
       <div class="nav-buttons">
-        <button class="nav-btn" onclick="showPage('s4')">← Schritt 4</button>
-        <button class="nav-btn next" onclick="showPage('s6')"><div><span class="nav-btn-label">Weiter zu Schritt 6</span><span class="nav-btn-title">Zielgruppen-Pfade →</span></div></button>
+        <button class="nav-btn" onclick="showPage('s4')">&#8592; Schritt 4</button>
+        <button class="nav-btn next" onclick="showPage('s6')"><div><span class="nav-btn-label">Weiter zu Schritt 6</span><span class="nav-btn-title">Zielgruppen-Pfade &#8594;</span></div></button>
       </div>
     </div>`,
 
@@ -2508,55 +2692,138 @@ const pages = {
     <div class="page">
       <div class="content-header">
         <div class="phase-badge p2">Phase 2 · Designen</div>
-        <div class="step-title">Zielgruppen-<br>spezifische Lernpfade</div>
-        <div class="step-tagline">Unterschiedliche Mitarbeiterebenen brauchen unterschiedliche Formate, Inhalte und Intensitäten — one size fits nobody.</div>
+        <div class="step-title">Zielgruppen-Pfade<br>& Personalisierung</div>
+        <div class="step-tagline">Wer verschiedene Zielgruppen durch denselben Lernpfad schickt, verschwendet Zeit und Glaubwürdigkeit. Differenzierung ist kein Luxus — sie ist Grundvoraussetzung für Transfer.</div>
       </div>
       <div class="content-body">
+
         <div class="info-card">
-          <div class="card-label">Drei Ebenen</div>
-          <div class="card-title">Individual — Team — Organisation</div>
-          <div class="card-text">Die Gap-Analyse aus Phase 1 hat gezeigt, wer welche Bedarfe hat. Jetzt wird daraus ein konkreter Lernpfad je Zielgruppe — nicht ein generisches Programm für alle.</div>
-          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>86% Konfidenz — segmentierte Lernpfade zeigen konsistent höhere Wirksamkeit</div>
+          <div class="card-label">Grundprinzip</div>
+          <div class="card-title">Audience Analysis vor Content Design</div>
+          <div class="card-text">Learner Personas und Zielgruppenanalyse vor jedem Programm-Design sind keine akademische Übung — sie verhindern das Bauen von Inhalten die niemand braucht. Kernfragen: Was wissen sie bereits? Was müssen sie können? Welche Hindernisse haben sie? Wie lernen sie am liebsten?</div>
+          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>92% Konfidenz — fundamentales Prinzip des Instructional Design, breit validiert</div>
         </div>
 
         <div class="substeps-grid">
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Einstiegsebene</div>
-            <div class="substep-preview">Onboarding, Grundlagen, Job-Readiness</div>
+            <div class="substep-title">Learner Personas entwickeln</div>
+            <div class="substep-preview">Wer sind die Lernenden wirklich?</div>
             <div class="substep-detail">
-              <p>Fokus: Schnelle Produktivität im Job. Formate: strukturiertes Onboarding (30-60-90-Tage-Plan), E-Learning für Grundlagenwissen, Job Aids (Checklisten, How-To-Guides), Buddy-Programme.</p>
-              <p>Wichtig: Onboarding ist das wichtigste L&D-Programm überhaupt — es beeinflusst Retention, Produktivität und kulturelle Einbindung massgeblich. Mitarbeitende mit effektivem Onboarding bleiben 3x häufiger länger als 3 Jahre im Unternehmen.</p>
+              <p>Eine Learner Persona ist ein semi-fiktives Profil eines typischen Lernenden — basierend auf echten Daten aus Interviews, Surveys und Beobachtungen. Ziel: Designer und Stakeholder haben ein gemeinsames Bild von wem das Programm dient.</p>
+              <p><strong>Elemente einer guten Learner Persona:</strong></p>
+              <p>• <strong>Demografisches Profil:</strong> Rolle, Erfahrung, Alter (ungefähr), technische Affinität</p>
+              <p>• <strong>Lernkontext:</strong> Wann und wo lernt diese Person? (Desktop/Mobile, on-the-go, Büro, Schicht)</p>
+              <p>• <strong>Vorwissen:</strong> Was bringt sie mit? Was muss nicht erklärt werden?</p>
+              <p>• <strong>Motivatoren:</strong> Warum würde diese Person freiwillig lernen? Was nützt ihr persönlich?</p>
+              <p>• <strong>Barrieren:</strong> Was hält sie vom Lernen ab? (Zeit, Relevanzwahrnehmung, Technik, Angst)</p>
+              <p>• <strong>Zitat:</strong> Ein typischer Satz dieser Person über Lernen ("Ich hab keine Zeit für Kurse — ich lerne wenn ich es brauche")</p>
+              <p><strong>Praxis-Tipp:</strong> 2–3 Personas reichen für die meisten Programme. Mehr wird unübersichtlich. Baue ein "Primary Persona" (Hauptzielgruppe) und ein "Edge Case Persona" (Extremfall der beachtet werden muss).</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Fachkräfte</div>
-            <div class="substep-preview">Skills-Vertiefung, Expertise</div>
+            <div class="substep-title">Lernpfade nach Karrierestufe</div>
+            <div class="substep-preview">Einstieg vs. Fachkraft vs. Führung</div>
             <div class="substep-detail">
-              <p>Fokus: Fachliche Exzellenz und Spezialisierung. Formate: Fachspezifische Workshops und Zertifizierungen, Communities of Practice, Konferenzbesuche, externe Weiterbildungen.</p>
-              <p>Key: Fachkräfte lernen am besten von anderen Experten — peer-to-peer und extern, nicht von L&D-Generalisten. L&D-Rolle ist Kuratierung und Ermöglichung, nicht Inhaltserstellung.</p>
+              <p>Die drei grossen Differenzierungsachsen in Corporate Learning:</p>
+              <p><strong>Einstiegsebene (0–2 Jahre):</strong><br>
+              Bedarf: Grundlagen, Orientierung, Normen & Prozesse, psychologische Sicherheit aufbauen.<br>
+              Design-Ansatz: Strukturierter Onboarding-Pfad, viel Buddy-Support, klare Milestones (30/60/90 Tage), niedrige Einstiegshürde.<br>
+              Häufiger Fehler: Überflutung mit Compliance-Modulen statt Job-Orientierung.</p>
+              <p><strong>Fachkräfte (2–8 Jahre):</strong><br>
+              Bedarf: Vertiefung, Expertise-Aufbau, Sichtbarkeit, Spezialisierung.<br>
+              Design-Ansatz: Pull statt Push — kuratierte Lernpfade die die Person selbst wählen kann. Skills-Assessments als Eingangspunkt. Project-based Learning.<br>
+              Häufiger Fehler: Gleiches Grundlagen-Curriculum wie Einsteiger.</p>
+              <p><strong>Führungskräfte:</strong><br>
+              Bedarf: Leadership-Fähigkeiten, strategisches Denken, Selbstreflexion, Umgang mit Komplexität.<br>
+              Design-Ansatz: Peer Learning & Action Learning als Kern. 360°-Feedback. Coaching. Wenig Frontaltraining.<br>
+              Häufiger Fehler: Technische Experten in Führungsposition mit Content aus dem Allgemein-Katalog bedienen.</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Führungskräfte</div>
-            <div class="substep-preview">Leadership, Coaching, Strategie</div>
+            <div class="substep-title">Differenzierung nach Vorkenntnisstand</div>
+            <div class="substep-preview">Pre-Assessments als Einstiegspunkt</div>
             <div class="substep-detail">
-              <p>Fokus: Menschen führen, Entscheidungen treffen, Veränderungen gestalten. Formate: Leadership-Programme (multimodal, über mehrere Monate), Executive Coaching, 360°-Feedback, Action Learning Sets.</p>
-              <p>Häufiger Fehler: Führungskräfte-Entwicklung nur als "Führungs-Skills-Training" verstehen. Tatsächlich brauchen Führungskräfte auch Business Acumen, Change-Kompetenz und die Fähigkeit, selbst als Lernbegleiter für ihr Team zu agieren.</p>
+              <p>Alle durch das gleiche Curriculum schicken unabhängig von Vorkenntnissen ist einer der teuersten Designfehler — erfahrene Mitarbeitende verlieren Respekt, Neulinge werden überfordert.</p>
+              <p><strong>Lösung: Pre-Assessment als Routing-Mechanismus</strong></p>
+              <p>• Kurzer Eingangstest (10–15 Fragen) am Anfang des Lernpfads<br>
+              • Score bestimmt welche Module Pflicht, welche optional, welche übersprungen werden<br>
+              • Fortgeschrittene können direkt zu Level 3–4 springen<br>
+              • Zeitersparniss signalisiert: "Dein Wissen wird respektiert"</p>
+              <p><strong>Adaptive Learning Platforms</strong> automatisieren dieses Routing und passen den Pfad laufend an (z.B. 360Learning, Degreed, Docebo). Für kleinere Programme: manuelles Routing per Self-Assessment ("Ich bin Anfänger / Fortgeschrittener / Experte").</p>
+              <p><strong>Knowledge Confidence Matrix:</strong> Zwei Dimensionen messen — Wissen (kann ich es?) und Sicherheit (glaube ich es zu können?). Lernende die es können aber nicht wissen sind gefährlicher als solche die beides nicht wissen.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>86% Konfidenz — starke Forschungsbasis für adaptive Ansätze, besonders bei heterogenen Zielgruppen</div>
             </div>
           </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Skills-basierte Lernpfade</div>
+            <div class="substep-preview">Von Rollen zu Skills — der Paradigmenwechsel</div>
+            <div class="substep-detail">
+              <p>Traditionell werden Lernpfade nach Rolle oder Hierarchiestufe organisiert ("Onboarding für Junior Sales"). Der aktuelle Paradigmenwechsel: <strong>Skills als primäre Organisationseinheit</strong>.</p>
+              <p><strong>Skill Taxonomie aufbauen:</strong><br>
+              • Welche Skills braucht jede Rolle? (Skill-Matrix per Abteilung)<br>
+              • Welche Skills sind "Power Skills" (cross-funktional, langlebig)?<br>
+              • Welche Skills sind "Decay Skills" (veralten schnell — z.B. spezifische Tools)?</p>
+              <p><strong>Skills-Intelligence-Plattformen:</strong> Degreed, Learnerbly, Fuel50 — ermöglichen es, Skill-Gaps organisationsweit sichtbar zu machen und Lernempfehlungen automatisiert zu generieren.</p>
+              <p><strong>Skill-Profil statt Curriculum:</strong> Jede Mitarbeiterin hat ein Skill-Profil mit aktuellem Level und Ziel-Level. Der Lernpfad ergibt sich aus dem Delta. L&D kuratiert Ressourcen pro Skill — keine fixen Kurse.</p>
+              <p><strong>World Economic Forum (WEF) Future of Jobs Report 2025:</strong> 6 der 10 wichtigsten Skills für 2030 sind Power Skills (kritisches Denken, Kreativität, Resilienz) — kein technisches Fachwissen.</p>
+            </div>
+          </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
             <div class="substep-title">Personalisierung durch Daten</div>
-            <div class="substep-preview">Adaptive Lernpfade</div>
+            <div class="substep-preview">Von statischen Pfaden zu dynamischen Empfehlungen</div>
             <div class="substep-detail">
-              <p>Fortgeschrittener Ansatz: Lernpfade basierend auf dem individuellen Ergebnis der Kompetenzeinschätzung (aus Schritt 3) automatisch anpassen. Wer bestimmte Skills bereits hat, überspringt entsprechende Module.</p>
-              <p>Dies erfordert eine Learning-Management-Plattform mit Skill-Mapping-Funktionalität — aber selbst manuell umgesetzt (durch kurze Pre-Assessments) steigert Relevanz und Engagement erheblich.</p>
+              <p>Echte Personalisierung geht über "Wähle deinen Track" hinaus und nutzt Verhaltensdaten um Lernempfehlungen automatisch anzupassen.</p>
+              <p><strong>Datenpunkte die Personalisierung ermöglichen:</strong><br>
+              • Absolvierte Inhalte und Assessment-Scores (Learning Management System (LMS))<br>
+              • Performance-Review-Daten (Human Resources Information System (HRIS))<br>
+              • Skill-Assessments und Manager-Ratings<br>
+              • Karriereziele (aus Individual Development Plan (IDP))<br>
+              • Engagement-Patterns (welche Formate nutzt diese Person wirklich?)</p>
+              <p><strong>Personalisierungs-Stufen:</strong><br>
+              Level 1 — Segmentierung: Unterschiedliche Pfade für verschiedene Gruppen (manuell)<br>
+              Level 2 — Self-selection: Lernende wählen selbst ihren Track<br>
+              Level 3 — Algorithmus-basiert: Plattform empfiehlt basierend auf Daten<br>
+              Level 4 — Adaptiv: Inhalt passt sich laufend an Performance und Tempo an</p>
+              <p><strong>Datenschutz-Hinweis:</strong> Datenschutz-Grundverordnung (DSGVO) beachten — Lernenden muss transparent sein welche Daten für Empfehlungen genutzt werden. Opt-in für erweiterte Personalisierung empfohlen.</p>
             </div>
           </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Onboarding-Pfad-Design</div>
+            <div class="substep-preview">Die ersten 90 Tage entscheiden über Retention</div>
+            <div class="substep-detail">
+              <p>Onboarding ist der Return on Investment (ROI)-stärkste L&D-Invest: 30 Tage weniger Time-to-Productivity = ~$12k Wert pro Mitarbeiter:in. Und: 90-Tage-Retention-Entscheidungen fallen in den ersten 2 Wochen.</p>
+              <p><strong>Best-Practice Onboarding-Architektur (90-Tage-Modell):</strong></p>
+              <p><strong>Pre-boarding (vor Tag 1):</strong> Zugänge bereit, Buddy zugewiesen, Willkommens-Nachricht, optionale Inhalte zur Vorbereitung. Ziel: Erster Eindruck vor dem ersten Tag.</p>
+              <p><strong>Woche 1 — Orientierung:</strong> Kultur, Team-Rituale, Sicherheit, erste Begegnungen. Keine Pflicht-eLearning-Flut. Ziel: "Ich gehöre dazu".</p>
+              <p><strong>30 Tage — Klarheit:</strong> Rollen-Erwartungen klar, erste Contribution, Buddy-Check-in. Ziel: "Ich weiß was von mir erwartet wird".</p>
+              <p><strong>60 Tage — Kompetenz:</strong> Fachliche Trainings abgeschlossen, erste Feedback-Runde. Ziel: "Ich kann meine Arbeit selbstständig machen".</p>
+              <p><strong>90 Tage — Contribution:</strong> Performance-Gespräch, Individual Development Plan (IDP) aufgesetzt, Netzwerk aufgebaut. Ziel: "Ich bringe Wert und sehe meine Zukunft hier".</p>
+              <p><strong>Häufigste Fehler:</strong> Zu viel Compliance-eLearning in Woche 1 (Onboarding fühlt sich wie Bürokratie an), kein Buddy oder Buddy ohne Briefing, 90-Tage-Check fehlt.</p>
+            </div>
+          </div>
+
         </div>
+
+        <div class="questions-box">
+          <div class="questions-title">Zielgruppen-Checkliste vor dem Programm-Design</div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Learner Personas für die 2–3 wichtigsten Zielgruppen entwickelt?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Pre-Assessment oder Self-Assessment zur Vorkenntnisbestimmung eingeplant?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Differenzierung nach Karrierestufe berücksichtigt?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Skills-Perspektive: Welche konkreten Skills soll das Programm entwickeln?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Lernkontext bekannt: Desktop/Mobil, Büro/Feld, synchron/asynchron?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Barrieren identifiziert: Was könnte Beteiligung verhindern?</span></div>
+        </div>
+
       </div>
       <div class="nav-buttons">
-        <button class="nav-btn" onclick="showPage('s5')">← Schritt 5</button>
-        <button class="nav-btn next" onclick="showPage('s7')"><div><span class="nav-btn-label">Weiter zu Schritt 7</span><span class="nav-btn-title">Build vs. Buy →</span></div></button>
+        <button class="nav-btn" onclick="showPage('s5')">&#8592; Schritt 5</button>
+        <button class="nav-btn next" onclick="showPage('s7')"><div><span class="nav-btn-label">Weiter zu Schritt 7</span><span class="nav-btn-title">Build vs. Buy &#8594;</span></div></button>
       </div>
     </div>`,
 
@@ -2564,59 +2831,148 @@ const pages = {
     <div class="page">
       <div class="content-header">
         <div class="phase-badge p2">Phase 2 · Designen</div>
-        <div class="step-title">Build vs. Buy<br>entscheiden</div>
-        <div class="step-tagline">Eine der wichtigsten strategischen Entscheidungen in L&D — mit direktem Einfluss auf Qualität, Geschwindigkeit und Budget.</div>
+        <div class="step-title">Build vs. Buy<br>& Vendor-Management</div>
+        <div class="step-tagline">Eine der folgenreichsten L&D-Entscheidungen — mit falscher Wahl verschwendet man Budget, Zeit oder beides. Framework, Entscheidungsmatrix und Vendor-Auswahl-Prozess.</div>
       </div>
       <div class="content-body">
+
         <div class="info-card">
-          <div class="card-label">Entscheidungsrahmen</div>
-          <div class="card-title">Drei Optionen, drei Kontexte</div>
-          <div class="card-text">
-            <strong>Build (Inhouse):</strong> Eigene Inhalte entwickeln — sinnvoll, wenn der Bedarf hochspezifisch und unternehmenskritisch ist und Wissen intern vorhanden ist.<br><br>
-            <strong>Buy (Vendor):</strong> Externe Anbieter oder Off-the-shelf-Inhalte kaufen — sinnvoll für Standardthemen (Compliance, Software, allgemeine Skills).<br><br>
-            <strong>Blended:</strong> Kombination — externer Rahmen mit internen Anpassungen und eigenen Praxisbeispielen. Oft der pragmatischste Weg.
-          </div>
-          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>80% Konfidenz — kontextabhängige Entscheidung, keine universelle Regel</div>
+          <div class="card-label">Grundprinzip</div>
+          <div class="card-title">Build vs. Buy vs. Curate vs. Blend</div>
+          <div class="card-text">Die klassische Build-vs.-Buy-Dichotomie ist zu simpel. In der Praxis gibt es vier Optionen: selbst bauen, extern kaufen/beauftragen, bestehende Inhalte kuratieren (z.B. LinkedIn Learning, Coursera), oder eine Kombination. Die richtige Wahl hängt von Spezifität, Zeit, Budget und strategischer Bedeutung ab.</div>
         </div>
 
         <div class="substeps-grid">
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Wann Build sinnvoll ist</div>
-            <div class="substep-preview">Unique, kritisch, intern</div>
+            <div class="substep-title">Wann Build die richtige Wahl ist</div>
+            <div class="substep-preview">Spezifisch, strategisch, einzigartig</div>
             <div class="substep-detail">
-              <p>Build lohnt sich, wenn: Der Inhalt ist hochspezifisch für das Unternehmen (Produkte, Prozesse, Kultur), internes Expertenwissen ist verfügbar und bereit für Wissenstransfer, der Bedarf ist gross und wiederkehrend.</p>
-              <p>Risiko: Inhouse-Entwicklung ist teuer und zeitaufwändig. Time-to-Deploy kann 3–6 Monate betragen. Nur für strategisch kritische Inhalte rechtfertigt sich der Aufwand.</p>
+              <p><strong>Build ist sinnvoll wenn:</strong></p>
+              <p>• <strong>Hochspezifischer Kontext:</strong> Inhalte die nur für diese Organisation/Branche/Prozesse relevant sind (z.B. internes System-Training, firmenspezifische Compliance)</p>
+              <p>• <strong>Strategischer Wettbewerbsvorteil:</strong> Das Know-how ist differenzierend — es extern zu geben würde es entwerten</p>
+              <p>• <strong>Langfristiger Bedarf:</strong> Inhalte die mehrere Jahre genutzt werden und häufig aktualisiert werden müssen</p>
+              <p>• <strong>Hohe Teilnehmerzahl:</strong> Bei 500+ Lernenden amortisiert sich der Entwicklungsaufwand</p>
+              <p>• <strong>Kulturelle Einbettung:</strong> Fallbeispiele, Sprache und Kontext müssen aus der eigenen Organisation kommen</p>
+              <p><strong>Build-Kosten realistisch einschätzen:</strong><br>
+              Faustregel: 1 Stunde fertiges eLearning = 40–100 Entwicklungsstunden (Low End: einfache Slides/Narration, High End: Branching Scenarios, Custom Interactions). Viele Organisationen unterschätzen Build-Aufwand um Faktor 3–5.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>84% Konfidenz — Richtwerte basieren auf Branchenstandards, variieren je nach Komplexität stark</div>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Wann Buy sinnvoll ist</div>
-            <div class="substep-preview">Standard, schnell, skalierbar</div>
+            <div class="substep-title">Wann Buy/Curate die richtige Wahl ist</div>
+            <div class="substep-preview">Generisch, schnell, skalierbar</div>
             <div class="substep-detail">
-              <p>Buy lohnt sich für: Compliance-Training, allgemeine Software-Skills (Excel, PowerPoint, etc.), Leadership-Grundlagen, Soft Skills wie Kommunikation oder Zeitmanagement.</p>
-              <p>Vorteil: Sofort verfügbar, professionell produziert, oft günstiger als Inhouse. Nachteil: Kein Unternehmenskontext, niedrigere Relevanz, oft schlechteres Engagement.</p>
+              <p><strong>Buy ist sinnvoll wenn:</strong></p>
+              <p>• <strong>Generische Skills:</strong> Excel, Kommunikation, Präsentation, Projektmanagement — diese Inhalte sind gut verfügbar und bereits hochwertig produziert</p>
+              <p>• <strong>Schneller Bedarf:</strong> Kein Zeit für monatelange Eigenentwicklung</p>
+              <p>• <strong>Breite Zielgruppe mit niedrigem Spezifitätsbedarf:</strong> Onboarding-Grundlagen, Soft Skills Bibliothek</p>
+              <p>• <strong>Kleines L&D-Team ohne Produktions-Kapazität</strong></p>
+              <p><strong>Curate ist sinnvoll wenn:</strong><br>
+              Freie, hochwertige Ressourcen existieren (YouTube, TED, Coursera, HBR) die nur kuratiert und in Pfade eingebettet werden müssen. Spart Produktionskosten komplett.</p>
+              <p><strong>Wichtige Qualitätsprüfung bei externen Inhalten:</strong><br>
+              • Sind die Fallbeispiele für die Zielgruppe relevant?<br>
+              • Entspricht die Lernqualität dem eigenen Anspruch?<br>
+              • Sind Inhalte auf dem aktuellen Stand?<br>
+              • Wie werden Lernergebnisse getrackt (Learning Management System (LMS)-Integration, xAPI/Sharable Content Object Reference Model (SCORM))?</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Der Blended-Ansatz</div>
-            <div class="substep-preview">Das Beste aus beiden Welten</div>
+            <div class="substep-title">Entscheidungsmatrix: Build vs. Buy</div>
+            <div class="substep-preview">5 Kriterien, strukturiert entscheiden</div>
             <div class="substep-detail">
-              <p>Praktisches Beispiel: Externes Leadership-Programm kaufen (Rahmen, Modelle, Übungen) + interne Fallstudien und Praxisbeispiele hinzufügen + interne Coaches/Mentoren einbinden.</p>
-              <p>Das externe Programm liefert professionelle Didaktik und Struktur. Die internen Elemente sorgen für Relevanz und unmittelbare Anwendbarkeit.</p>
+              <p>Für eine strukturierte Build-vs.-Buy-Entscheidung können diese 5 Kriterien auf einer 1–5-Skala bewertet werden:</p>
+              <p><strong>1. Spezifität (1=generisch, 5=hochspezifisch):</strong><br>
+              Bei Score ≥ 4 → tendiert zu Build. Generische Inhalte (Score ≤ 2) → klar Buy/Curate.</p>
+              <p><strong>2. Strategische Bedeutung (1=nice-to-have, 5=business-critical):</strong><br>
+              Bei Score ≥ 4 → Eigenentwicklung schützt das Know-how. Score ≤ 2 → Externt kaufen reicht.</p>
+              <p><strong>3. Zeitdruck (1=kein Druck, 5=sofort):</strong><br>
+              Bei Score ≥ 4 → Buy/Curate oder Rapid Prototyping. Build braucht Zeit.</p>
+              <p><strong>4. Budget (1=minimal, 5=signifikant):</strong><br>
+              Bei Score ≤ 2 → Curate oder einfache Build-Lösung. Aufwändige Eigenentwicklung braucht Budget.</p>
+              <p><strong>5. Zielgruppenvolumen (1 = &lt;20 Personen, 5 = 500+):</strong><br>
+              Bei Score ≤ 2 → Return on Investment (ROI) von Build-Invest oft nicht gegeben. Bei Score ≥ 4 → amortisiert sich.</p>
+              <p><strong>Auswertung:</strong><br>
+              Spezifität + Strategisch ≥ 8 → Build. Zeitdruck + kleines Budget → Buy/Curate. Alles dazwischen → Blended (Buy als Basis, eigene Kontextualisierung drauf).</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Vendor-Auswahl</div>
-            <div class="substep-preview">Kriterien, Piloten, Entscheidung</div>
+            <div class="substep-title">Vendor-Auswahl-Prozess</div>
+            <div class="substep-preview">Von Request for Proposal bis Pilotphase</div>
             <div class="substep-detail">
-              <p>Wichtige Auswahlkriterien für externe Anbieter: nachgewiesene Wirksamkeit (nicht nur Teilnehmerzufriedenheit), kulturelle Passung, Anpassbarkeit, technische Integration, Preis-Leistung.</p>
-              <p>Best-Practice: Vor dem Vollkauf immer ein Pilot mit einer kleinen Gruppe. Feedback einholen, Lernziele prüfen, dann entscheiden.</p>
+              <p><strong>5-Schritte-Prozess für eine rigorose Vendor-Auswahl:</strong></p>
+              <p><strong>Schritt 1 — Requirements Definition:</strong><br>
+              Was muss die Lösung leisten? Muss-Kriterien (ohne die kein Deal) vs. Kann-Kriterien (nice-to-have). Technische Requirements (Learning Management System (LMS)-Integration, Datenschutz-Grundverordnung (DSGVO), Single Sign-On, Mobilfähigkeit).</p>
+              <p><strong>Schritt 2 — Long List → Short List:</strong><br>
+              5–8 Anbieter initial sichten. Kriterien: Referenzen in der Branche, Produktreife, Preismodell, Support. Short List: 2–3 Anbieter für vertieften Prozess.</p>
+              <p><strong>Schritt 3 — Strukturierte Demo (Vendor Scorecard):</strong><br>
+              Gleiche Szenarien für alle Anbieter — direkt vergleichbar. Interne Stakeholder in der Demo dabei. Bewertung nach vordefinierten Kriterien, nicht Bauchgefühl.</p>
+              <p><strong>Schritt 4 — Referenzgespräche:</strong><br>
+              Mit 2–3 aktuellen Kunden des Anbieters sprechen (nicht die vom Anbieter vorgeschlagenen — eigene suchen). Fragen: Wurden Versprechen gehalten? Support-Qualität? Was würden sie anders machen?</p>
+              <p><strong>Schritt 5 — Pilot vor Vollausroll:</strong><br>
+              Nie ohne Pilot. 4–8 Wochen, 10–20 Teilnehmende, klare Erfolgskriterien vorher definiert. Entscheidung nach Pilotdaten, nicht nach Sales-Präsentation.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>87% Konfidenz — etablierte Procurement-Best-Practice, adaptiert für L&D-Kontext</div>
             </div>
           </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Authoring Tools — Überblick</div>
+            <div class="substep-preview">Welches Tool für welchen Build-Bedarf?</div>
+            <div class="substep-detail">
+              <p><strong>Für komplexe, interaktive eLearning-Kurse:</strong><br>
+              • <strong>Articulate 360 (Storyline + Rise):</strong> Industriestandard. Storyline für Branching Scenarios und Custom Interactions. Rise für schnelle, responsive Module. Teuer (~$1.400/Jahr), aber marktführend.</p>
+              <p><strong>Für schnelle, einfache Module:</strong><br>
+              • <strong>iSpring Suite:</strong> PowerPoint-basiert, niedrige Lernkurve. Ideal für Teams die bereits PowerPoint beherrschen.<br>
+              • <strong>Lectora:</strong> Stark in Accessibility/Section 508 Compliance. Gut für regulierte Branchen.</p>
+              <p><strong>Für kollaboratives, schnelles Prototyping:</strong><br>
+              • <strong>Canva for Education / Figma:</strong> Design-Tools die zunehmend für Learning-Prototypen genutzt werden.</p>
+              <p><strong>Für Video-basierte Inhalte:</strong><br>
+              • <strong>Loom:</strong> Schnelle Screencasts und Erklärvideos, keine Produktion nötig.<br>
+              • <strong>Synthesia:</strong> Künstliche Intelligenz (KI)-Avatar-Videos — Text zu Video in Minuten. Revolutioniert Content-Produktion für Standard-Inhalte.</p>
+              <p><strong>Für Künstliche Intelligenz (KI)-gestützte Erstellung:</strong><br>
+              • <strong>Articulate AI:</strong> Quizfragen und Kursinhalte aus Dokumenten generieren<br>
+              • <strong>Coursebox:</strong> Vollständige Kurs-Generierung aus PDFs/YouTube-Links</p>
+            </div>
+          </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Content Libraries — Überblick</div>
+            <div class="substep-preview">Was gibt es für Curate-Ansätze?</div>
+            <div class="substep-detail">
+              <p><strong>Für Soft Skills & Leadership (breite Bibliotheken):</strong><br>
+              • <strong>LinkedIn Learning:</strong> Umfangreich, gut in Microsoft 365 integriert. Gut für selbstgesteuertes Lernen. Schwach bei sehr spezifischen Themen.<br>
+              • <strong>Coursera for Business / edX for Business:</strong> Universitätskurse, ideal für tiefes konzeptionelles Lernen. Zertifikate mit Marktwert.<br>
+              • <strong>Udemy for Business:</strong> Günstig, sehr breites Angebot, variable Qualität. Gut für technische Skills.</p>
+              <p><strong>Für Compliance & Pflichttraining:</strong><br>
+              • <strong>Skillsoft Compliance:</strong> Breit, gut localizable, Learning Management System (LMS)-Integration solide<br>
+              • <strong>EasyGenerator / Lectora Ready-Made:</strong> Compliance-spezifische Bibliotheken</p>
+              <p><strong>Für Führungskräfte-Entwicklung:</strong><br>
+              • <strong>Harvard ManageMentor (HMM):</strong> Premium-Content von Harvard Business Review (HBR), hoch angesehen<br>
+              • <strong>MindTools:</strong> Praktische Management-Tools und Frameworks, gut als Referenz</p>
+              <p><strong>Kostenlos & hochwertig (Curate):</strong><br>
+              TED / TED-Ed, Harvard Business Review (HBR) Free Articles, YouTube-Kanäle von Universitäten (MIT OpenCourseWare), Podcast-Reihen (HBR IdeaCast, WorkLife with Adam Grant)</p>
+            </div>
+          </div>
+
         </div>
+
+        <div class="questions-box">
+          <div class="questions-title">Build vs. Buy — Checkliste vor der Entscheidung</div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Spezifität bewertet — wie einzigartig ist der Lernbedarf für diese Organisation?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Realistischer Build-Aufwand kalkuliert (inkl. Review, Update, Maintenance)?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Existing Content geprüft — gibt es bereits gute externe Ressourcen?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Pilotphase eingeplant bevor Vollausroll?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Datenschutz-Grundverordnung (DSGVO) & Learning Management System (LMS)-Integration bei externem Anbieter geprüft?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Vendor-Referenzgespräche geführt (nicht nur Demo gesehen)?</span></div>
+        </div>
+
       </div>
       <div class="nav-buttons">
-        <button class="nav-btn" onclick="showPage('s6')">← Schritt 6</button>
-        <button class="nav-btn next" onclick="showPage('s8')"><div><span class="nav-btn-label">Weiter zu Schritt 8</span><span class="nav-btn-title">Kommunikation →</span></div></button>
+        <button class="nav-btn" onclick="showPage('s6')">&#8592; Schritt 6</button>
+        <button class="nav-btn next" onclick="showPage('s8')"><div><span class="nav-btn-label">Weiter zu Schritt 8</span><span class="nav-btn-title">Kommunikation &#8594;</span></div></button>
       </div>
     </div>`,
 
@@ -2624,55 +2980,148 @@ const pages = {
     <div class="page">
       <div class="content-header">
         <div class="phase-badge p2">Phase 2 · Designen</div>
-        <div class="step-title">Rollout kommunizieren<br>& Sponsoring sichern</div>
-        <div class="step-tagline">Ohne sichtbares Leadership-Commitment scheitern viele L&D-Programme — nicht am Inhalt, sondern an mangelndem Engagement.</div>
+        <div class="step-title">Rollout-Kommunikation<br>& Stakeholder-Management</div>
+        <div class="step-tagline">Das beste Programm scheitert ohne richtiges Sponsoring und Kommunikation. Stakeholder-Engagement, Change Communication und Rollout-Planung als eigenständige Design-Disziplin.</div>
       </div>
       <div class="content-body">
+
         <div class="info-card">
-          <div class="card-label">Warum es scheitert</div>
-          <div class="card-title">Das Change-Problem in L&D</div>
-          <div class="card-text">L&D-Programme sind im Kern Change-Initiativen — sie sollen Verhalten verändern. Verhaltensänderung braucht: klares "Warum", sichtbare Unterstützung durch Führung, soziale Bestärkung durch Peers, Zeit und Raum zum Üben. Fehlt einer dieser Faktoren, scheitert das Programm — unabhängig von der Qualität der Inhalte.</div>
-          <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>84% Konfidenz — Change-Management-Forschung konsistent, Kotter und Prosci-Modelle</div>
+          <div class="card-label">Grundprinzip</div>
+          <div class="card-title">Kommunikation ist kein Nachgedanke</div>
+          <div class="card-text">L&D-Rollouts scheitern seltener an schlechten Inhalten als an mangelndem Stakeholder-Alignment und fehlender Kommunikation. "Wir haben es angekündigt" ist keine Kommunikationsstrategie. Was Menschen motiviert zu lernen ist nicht der Kurs — es ist das Warum, das Wer-hat-unterschrieben und das Was-hat-das-mit-mir-zu-tun.</div>
         </div>
 
         <div class="substeps-grid">
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Executive Sponsoring</div>
-            <div class="substep-preview">Sichtbare Unterstützung von oben</div>
+            <div class="substep-title">Stakeholder-Mapping & Analyse</div>
+            <div class="substep-preview">Wer muss überzeugt, informiert, eingebunden werden?</div>
             <div class="substep-detail">
-              <p>Ein Executive Sponsor ist nicht jemand, der das Programm genehmigt — sondern jemand, der aktiv kommuniziert, warum es wichtig ist, selbst sichtbar teilnimmt (oder zumindest in Kick-offs präsent ist) und Hindernisse aus dem Weg räumt.</p>
-              <p>Ohne Executive Sponsoring signalisiert das Unternehmen implizit: "Nice-to-have, kein echter Auftrag."</p>
+              <p>Stakeholder-Mapping ist die Grundlage jeder Rollout-Planung. Nicht alle Stakeholder haben die gleichen Interessen oder den gleichen Einfluss.</p>
+              <p><strong>Power-Interest-Matrix:</strong><br>
+              Zeichne alle relevanten Personen auf zwei Achsen: Einfluss (hoch/niedrig) × Interesse (hoch/niedrig).</p>
+              <p>• <strong>Hoher Einfluss / Hohes Interesse → Aktiv managen:</strong> Chief Executive Officer (CEO), Chief Human Resources Officer (CHRO), Abteilungsleitung. Müssen überzeugt sein und sichtbar unterstützen. Regelmässige Updates, frühzeitige Einbindung.</p>
+              <p>• <strong>Hoher Einfluss / Niedriges Interesse → Engagieren:</strong> CFO, Legal. Nicht ignorieren — wenn sie plötzlich Bedenken haben, stoppen sie alles. Effiziente Updates, keine Details.</p>
+              <p>• <strong>Niedriger Einfluss / Hohes Interesse → Informieren:</strong> Lernende selbst, Team Leads. Gut informiert halten — sie sind Botschafter:innen oder Kritiker:innen.</p>
+              <p>• <strong>Niedriger Einfluss / Niedriges Interesse → Beobachten:</strong> Minimal Aufwand, auf dem Radar behalten.</p>
+              <p><strong>Stakeholder-Interview vor dem Design:</strong> Führe kurze (20 Min.) Gespräche mit Key Stakeholdern bevor du designst. Frage: "Was muss sich nach diesem Programm verändert haben damit Sie es als Erfolg sehen?" Diese Antworten definieren Level-4-Key Performance Indicator (KPI)s und sichern buy-in gleichzeitig.</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Das "Warum" kommunizieren</div>
-            <div class="substep-preview">Verbindung zu Zielen sichtbar machen</div>
+            <div class="substep-title">Executive Sponsoring sichern</div>
+            <div class="substep-preview">Ohne Führungsunterstützung kein nachhaltiger Transfer</div>
             <div class="substep-detail">
-              <p>Mitarbeitende müssen verstehen, warum dieses Programm jetzt, für sie, relevant ist. Die Verbindung zu den Organisationseinheit (OE)-Zielen aus Phase 1 ist hier der Schlüssel.</p>
-              <p>Konkret: Nicht "Wir bieten jetzt ein Leadership-Programm an" sondern "Um unser Ziel X zu erreichen, brauchen wir stärkere [Fähigkeit Y] in der gesamten Führungsebene — deshalb starten wir dieses Programm."</p>
+              <p>Forschung ist eindeutig: Manager-Support ist der stärkste einzelne Prädiktor für Transfer-Erfolg (Blume et al., 2010; Aguinis & Kraiger, 2009). Executive Sponsoring ist mehr als ein Name auf einer E-Mail.</p>
+              <p><strong>Was echtes Executive Sponsoring bedeutet:</strong><br>
+              • Sponsor kommuniziert das "Warum" selbst — nicht L&D<br>
+              • Sponsor macht Lernen zu einem Team-Thema in eigenen Meetings<br>
+              • Sponsor fragt nach dem Transfer ("Was hast du letzte Woche aus dem Training angewendet?")<br>
+              • Sponsor schützt Lernzeit gegen operative Prioritäten</p>
+              <p><strong>Wie man Executive Sponsoring gewinnt:</strong><br>
+              1. Business Case in der Sprache des Executives formulieren (nicht L&D-Jargon)<br>
+              2. Den persönlichen Nutzen für den Executive herausarbeiten<br>
+              3. Klare, minimale Anforderungen an das Sponsoring definieren (kein Blanko-Scheck erbeten)<br>
+              4. Frühe Erfolgsdaten teilen — Sponsoren bleiben wenn sie Wirkung sehen</p>
+              <p><strong>Häufiger Fehler:</strong> Executive Sponsor "nominiert" statt wirklich eingebunden. Resultat: Name auf der E-Mail, Null Engagement. Test: Hat der Sponsor das Programm in einem eigenen Meeting erwähnt? Wenn nicht — kein echtes Sponsoring.</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>91% Konfidenz — einer der am stärksten replizierten Befunde in der Transfer-Forschung</div>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Rollout-Plan erstellen</div>
-            <div class="substep-preview">Phasen, Verantwortliche, Zeitplan</div>
+            <div class="substep-title">WIIFM — "What's In It For Me?"</div>
+            <div class="substep-preview">Die eine Frage die jede Kommunikation beantworten muss</div>
             <div class="substep-detail">
-              <p>Ein Rollout-Plan enthält: Zielgruppen und Reihenfolge (wer beginnt?), Kommunikationsplan (wann, was, an wen), technische Vorbereitung, Pilotgruppe, Skalierung.</p>
-              <p>Empfehlung: Mit einer kleinen, engagierten Pilotgruppe beginnen. Deren Erfahrungen und Feedback fliessen in die Optimierung ein, bevor das Programm skaliert wird.</p>
+              <p>Mitarbeitende lesen keine Trainings-Ankündigungen mit der Frage "Was ist gut für die Organisation?" Sie lesen sie mit der Frage: "Was bringt mir das?" (WIIFM = What's In It For Me?).</p>
+              <p><strong>WIIFM je nach Zielgruppe formulieren:</strong><br>
+              • <strong>Individuelle Mitarbeitende:</strong> Karriere, Skills, Sichtbarkeit, einfachere Arbeit, weniger Fehler<br>
+              • <strong>Führungskräfte:</strong> Team-Performance, weniger eskalierte Probleme, Retention<br>
+              • <strong>Senior Leadership:</strong> Business-Outcomes, Risikoreduktion, Kosteneinsparung<br>
+              • <strong>Introvertierte/Skeptiker:</strong> Autonomie, Selbsttempo, kein Classroom-Zwang</p>
+              <p><strong>Kommunikations-Rahmen — "3 Warum":</strong><br>
+              1. Warum jetzt? (Kontext, Anlass, Dringlichkeit)<br>
+              2. Warum du? (Relevanz für diese Zielgruppe, persönlicher Nutzen)<br>
+              3. Warum so? (Warum dieses Format — nicht ein anderes)</p>
+              <p><strong>Praxis-Test:</strong> Lies die Ankündigungs-E-Mail und streiche jede Organisation, die beschreibt warum es GUT FÜR DIE FIRMA ist. Was bleibt? Wenn wenig bleibt — neu schreiben aus Sicht der Empfängerin.</p>
             </div>
           </div>
+
           <div class="substep-card p2" onclick="toggleSub(this)">
-            <div class="substep-title">Führungskräfte als Lernbotschafter</div>
-            <div class="substep-preview">Manager enablen, nicht nur informieren</div>
+            <div class="substep-title">Rollout-Kommunikationsplan</div>
+            <div class="substep-preview">Welcher Kanal, wer sendet, wann</div>
             <div class="substep-detail">
-              <p>Die direkte Führungskraft hat den grössten Einfluss darauf, ob Mitarbeitende an L&D-Programmen teilnehmen und Gelerntes anwenden. Führungskräfte müssen befähigt werden: Gespräche über Entwicklung zu führen, Lernzeit zu schützen und Anwendung im Alltag zu unterstützen.</p>
-              <p>Praktisch: Manager-Briefing vor jedem Programm-Start mit konkreten Gesprächsleitfäden.</p>
+              <p>Ein Kommunikationsplan definiert: Was wird kommuniziert? Von wem? An wen? Wann? Über welchen Kanal?</p>
+              <p><strong>Typische Kommunikations-Timeline:</strong></p>
+              <p><strong>6–8 Wochen vor Start — Teaser:</strong><br>
+              "Etwas kommt." Neugier wecken, kein Overpromising. Durch den Executive Sponsor kommunizieren.</p>
+              <p><strong>3–4 Wochen vor Start — Hauptankündigung:</strong><br>
+              WIIFM klar. Logistik (Wann, wo, wie). Call-to-Action (Anmeldung, Terminblockierung). Durch direkte Führungskraft kommunizieren.</p>
+              <p><strong>1 Woche vor Start — Reminder:</strong><br>
+              Kurz, praktisch. Was muss vorbereitet werden? Pre-Work schicken wenn vorhanden. L&D kann direkt senden.</p>
+              <p><strong>Tag 1 — Welcome:</strong><br>
+              Klarer Einstieg, Programm-Ziele nochmal, Support-Möglichkeiten. Persönlich vom Trainer/Facilitator.</p>
+              <p><strong>Nach dem Programm — Transfer-Follow-up:</strong><br>
+              30-Tage-Erinnerung: "Was hast du umgesetzt?" Durch Führungskraft, nicht L&D — das macht es verbindlicher.</p>
+              <p><strong>Kanal-Auswahl:</strong> Pflichttraining → E-Mail + Learning Management System (LMS)-Benachrichtigung + Manager-Reminder. Freiwilliges Programm → Peer-Empfehlung > E-Mail (Social Proof nutzen!).</p>
             </div>
           </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Manager als Lernbotschafter:innen</div>
+            <div class="substep-preview">Der unterschätzte Multiplikator</div>
+            <div class="substep-detail">
+              <p>Manager sind der wichtigste Kanal für L&D-Adoption — und der am häufigsten vernachlässigte. Mitarbeitende orientieren sich stärker an dem was ihre Führungskraft tut als an dem was Human Resources (HR) kommuniziert.</p>
+              <p><strong>Manager-Enablement-Paket für jeden Rollout:</strong><br>
+              • <strong>Briefing-Dokument (1 Seite):</strong> Was ist das Programm? Warum jetzt? Was soll die Führungskraft konkret tun?<br>
+              • <strong>Conversation Starters:</strong> 3 Fragen die Führungskräfte im nächsten 1:1 stellen können ("Was nimmst du aus dem Training mit?")<br>
+              • <strong>FAQ:</strong> Die häufigsten Fragen die Mitarbeitende stellen werden, beantwortet<br>
+              • <strong>Time-Investment:</strong> Wie viel Zeit kostet es Mitarbeitende? Wann ist ein guter Zeitpunkt?</p>
+              <p><strong>Manager-Verhalten das Transfer fördert:</strong><br>
+              → Fragt nach dem Training: "Was hast du gelernt?"<br>
+              → Ermöglicht Anwendungsmöglichkeiten: "Für dieses Projekt könntest du X ausprobieren"<br>
+              → Modelliert selbst: "Ich mache auch gerade X Kurs"<br>
+              → Gibt Feedback auf Anwendungsversuche: "Das war gut — ich hab gesehen wie du X angewendet hast"</p>
+              <div class="confidence"><span class="confidence-dot" style="background:var(--phase2)"></span>93% Konfidenz — stärkster Transfer-Moderator in der Literatur, mehrfach repliziert</div>
+            </div>
+          </div>
+
+          <div class="substep-card p2" onclick="toggleSub(this)">
+            <div class="substep-title">Resistance Management</div>
+            <div class="substep-preview">Widerstand vorhersagen und vorbauen</div>
+            <div class="substep-detail">
+              <p>Widerstand gegen L&D-Programme ist vorhersehbar und hat bekannte Muster. Wer sie kennt, kann vorbauen statt nachzusteuern.</p>
+              <p><strong>Die 5 häufigsten Widerstandsmuster und Gegenstrategien:</strong></p>
+              <p><strong>1. "Ich hab keine Zeit":</strong><br>
+              Gegenmaßnahme: Zeitaufwand extrem klein machen. Lerneinheiten unter 20 Minuten. Manager schützt Lernzeit explizit.</p>
+              <p><strong>2. "Das ist nicht relevant für mich":</strong><br>
+              Gegenmaßnahme: WIIFM personalisieren. Kontext aus der eigenen Arbeit nutzen. Pre-Assessment das Relevanz zeigt.</p>
+              <p><strong>3. "Ich weiss das schon":</strong><br>
+              Gegenmaßnahme: Skip-Funktion für bekannte Inhalte. Pre-Assessment mit Routing. Experten als Peer-Teacher einbinden.</p>
+              <p><strong>4. "Lernen passiert bei uns nicht wirklich":</strong><br>
+              Gegenmaßnahme: Pilot-Erfolg sichtbar machen (Social Proof). Transfer-Geschichten teilen. Ein quick win der zeigt dass sich etwas ändert.</p>
+              <p><strong>5. "Das ist HR-Bürokratie":</strong><br>
+              Gegenmaßnahme: Programm vom Executive Sponsor kommunizieren lassen (nicht Human Resources (HR)). Sprache der Abteilung nutzen. Compliance-Anteile minimieren.</p>
+              <p><strong>Proaktive Widerstandsanalyse:</strong> Vor dem Rollout 3–5 Gespräche mit typischen Skeptikern führen. Ihre Einwände in die Kommunikation einbauen. Aus Kritikern werden oft die stärksten Botschafter wenn sie einbezogen wurden.</p>
+            </div>
+          </div>
+
         </div>
+
+        <div class="questions-box">
+          <div class="questions-title">Rollout-Checkliste</div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Stakeholder-Map erstellt — wer muss wie eingebunden werden?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Executive Sponsor identifiziert und gebrieft — wirkliches Engagement, nicht nur Name?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>WIIFM für jede Zielgruppe klar formuliert?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Kommunikations-Timeline definiert mit Kanal und Absender:in?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Manager-Enablement-Paket erstellt?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Häufigste Widerstandsmuster antizipiert und adressiert?</span></div>
+          <div class="question-item"><span class="q-num">&#10003;</span><span>Transfer-Follow-up eingeplant — 30-Tage-Check durch Führungskraft?</span></div>
+        </div>
+
       </div>
       <div class="nav-buttons">
-        <button class="nav-btn" onclick="showPage('s7')">← Schritt 7</button>
-        <button class="nav-btn next" onclick="showPage('s9')"><div><span class="nav-btn-label">Weiter zu Schritt 9</span><span class="nav-btn-title">Erfolgsmessung →</span></div></button>
+        <button class="nav-btn" onclick="showPage('s7')">&#8592; Schritt 7</button>
+        <button class="nav-btn next" onclick="showPage('s9')"><div><span class="nav-btn-label">Weiter zu Schritt 9</span><span class="nav-btn-title">Erfolgsmessung &#8594;</span></div></button>
       </div>
     </div>`,
 
@@ -4686,6 +5135,201 @@ const pages = {
       </div>
     </div>`,
 
+  change: () => `
+    <div class="page">
+      <div class="content-header">
+        <div class="cm-badge">Change Management</div>
+        <div class="step-title">Cialdinis 7<br>Einfluss-Prinzipien</div>
+        <div class="step-tagline">Warum Menschen Ja sagen &#8212; und wie diese Prinzipien direkt auf L&amp;D-Arbeit in resistenten Kulturen angewendet werden.</div>
+      </div>
+      <div class="content-body">
+
+        <div class="cm-intro">
+          Robert Cialdini identifizierte sechs (sp&#228;ter sieben) Kern-Prinzipien des Einflusses durch jahrzehntelange Forschung in der Sozialpsychologie. Im L&amp;D-Kontext erkl&#228;ren sie, warum Programm-Adoption scheitert oder gelingt &#8212; und wie gezielt Einfluss in Organisationen mit <strong>niedriger Lernbereitschaft</strong> aufgebaut werden kann. Klick auf jedes Prinzip f&#252;r die L&amp;D-Anwendung.
+        </div>
+
+        <div class="cialdini-grid">
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">1</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Social Proof</div>
+                <div class="cialdini-principle">Menschen orientieren sich an anderen, besonders in unsicheren Situationen</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Niemand m&#246;chte der Erste sein. Aber sobald ein glaubw&#252;rdiger Peer etwas sichtbar &#252;bernimmt, folgen andere. Genau deshalb funktioniert die Pilot-Team-Strategie &#8212; ein erfolgreiches Team wird zum Proof Point, der andere anzieht.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">Ein Team Lead erw&#228;hnt in einem All-Hands, dass das Failure-Debrief-Format ihrem letzten Projekt-Review geholfen hat. <strong>Drei andere Team Leads fragen in der n&#228;chsten Woche danach.</strong> L&amp;D hat nichts gepusht &#8212; der Peer hat die Arbeit erledigt.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">2</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Reziprozit&#228;t</div>
+                <div class="cialdini-principle">Wenn jemand etwas gibt, f&#252;hlen Menschen sich nat&#252;rlich verpflichtet, etwas zur&#252;ckzugeben</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Wenn L&amp;D wirklich zuh&#246;rt, was die Abteilung <em>tats&#228;chlich</em> braucht &#8212; statt einen Katalog zu pushen &#8212; f&#252;hlt sich die Abteilung geh&#246;rt und wird offener f&#252;r Engagement. Der Akt des Fragens <em>vor</em> dem Designen schafft Wohlwollen.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">Eine Listening Session mit Ingenieur:innen <em>bevor</em> etwas designed wird signalisiert Respekt f&#252;r ihre Zeit und Expertise. <strong>Diese Investition tendiert dazu, mehr Kooperation beim Programm-Launch zu erzeugen.</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">3</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Autorit&#228;t</div>
+                <div class="cialdini-principle">Menschen folgen glaubw&#252;rdigen Expert:innen. Credentials, Track Record und demonstriertes Wissen signalisieren Vertrauensw&#252;rdigkeit.</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Glaubw&#252;rdigkeit muss aufgebaut werden, bevor Einfluss m&#246;glich ist. In einer technischen Expertenkultur kann L&amp;D nicht einfach einmarschieren und Ingenieur:innen sagen, wie sie arbeiten sollen. Aber das Referenzieren solider Forschung (Edmondson zu Psychological Safety, Blume zu Transfer) signalisiert intellektuelle Ernsthaftigkeit.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">"<strong>Forschung zu hochperformanten technischen Teams zeigt, dass Failure-Debrief-Rituale Wiederholungsfehler um X% reduzieren</strong>" landet anders als "Wir denken, eine Fehlerkultur w&#228;re gut f&#252;r euch."</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">4</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Sympathie (Liking)</div>
+                <div class="cialdini-principle">Menschen lassen sich leichter beeinflussen von denen sie m&#246;gen &#8212; die &#228;hnlich sind, echtes Interesse zeigen, die sie gut f&#252;hlen lassen</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Beziehungen kommen vor Programmen. Ein L&amp;D-Partner, der sich Zeit nimmt die echte Arbeit der Tech-Abteilung zu verstehen, ihre Sprache spricht und echte Neugier auf ihre Probleme zeigt, kommt weiter als jemand der mit einer Slide-Deck auftaucht.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">Die <strong>ersten Wochen in informellen Gespr&#228;chen mit Ingenieur:innen und Team Leads verbringen</strong> &#8212; bevor etwas vorgeschlagen wird &#8212; baut die Sympathie auf, die sp&#228;tere Einflussnahme erm&#246;glicht.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">5</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Knappheit (Scarcity)</div>
+                <div class="cialdini-principle">Menschen sch&#228;tzen Dinge mehr, wenn sie sie als selten oder begrenzt wahrnehmen</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Hier ist Vorsicht geboten &#8212; k&#252;nstliche Knappheit f&#252;hlt sich manipulativ an. Aber echte Knappheit funktioniert: ein kleines Pilot-Team, eine eingeladene Co-Design-Gruppe oder eine begrenzte Anzahl Pl&#228;tze in einem Entwicklungsprogramm schafft wahrgenommenen Wert.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">"Wir f&#252;hren den ersten Failure-Culture-Pilot mit <strong>einem Team</strong> durch &#8212; und wir wollen dass es das richtige Team ist" ist &#252;berzeugender als "Alle werden das irgendwann durchlaufen." <strong>Ausgew&#228;hlt zu werden f&#252;hlt sich bedeutsam an.</strong></div>
+              </div>
+              <div class="cialdini-warning">K&#252;nstliche Knappheit in L&amp;D kann als manipulativ wahrgenommen werden und Vertrauen zerst&#246;ren. Nur anwenden wenn die Begrenzung echt ist.</div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">6</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Commitment &amp; Konsistenz</div>
+                <div class="cialdini-principle">Sobald Menschen eine kleine Verpflichtung eingehen, tendieren sie dazu, gr&#246;ssere einzuhalten um mit ihrem Selbstbild konsistent zu bleiben</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> Klein anfangen. Ein Mikro-Commitment holen &#8212; ein Team Lead stimmt zu, ein einziges 20-min&#252;tiges Debrief-Gespr&#228;ch zu moderieren. Dieses kleine Ja macht das n&#228;chste Ja einfacher, weil Menschen konsistent zu dem bleiben wollen, dem sie bereits zugestimmt haben.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">Einen skeptischen Tech Director zu fragen <strong>"W&#228;ren Sie offen f&#252;r ein 30-min&#252;tiges Gespr&#228;ch dar&#252;ber, was Fehlerkultur f&#252;r Ihre Abteilung bedeuten k&#246;nnte?"</strong> ist viel wahrscheinlicher erfolgreich als nach Sign-off f&#252;r ein 6-Monats-Programm zu fragen. Das 30-Minuten-Ja wird das Fundament f&#252;r alles andere.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cialdini-tile" onclick="toggleCialdini(this)">
+            <div class="cialdini-tile-header">
+              <div class="cialdini-num">7</div>
+              <div style="flex:1">
+                <div class="cialdini-name">Unity (Zugeh&#246;rigkeit)</div>
+                <div class="cialdini-principle">Menschen werden von denen beeinflusst, die sie als Teil ihrer In-Group sehen &#8212; geteilte Identit&#228;t, Werte oder Zugeh&#246;rigkeit</div>
+              </div>
+              <span class="cialdini-chevron">&#9660;</span>
+            </div>
+            <div class="cialdini-tile-body">
+              <div class="cialdini-ld"><strong>Im L&amp;D-Kontext:</strong> L&amp;D als wirklich Teil der Welt der Tech-Abteilung zu positionieren &#8212; nicht als externe Human Resources (HR)-Funktion, die Interventionen liefert &#8212; ist der ultimative Einfluss-Hebel. <em>"Wir versuchen dein Problem zu l&#246;sen, nicht unser Mandat zu erf&#252;llen"</em> ist die Botschaft, die Zugeh&#246;rigkeit schafft.</div>
+              <div class="cialdini-example">
+                <div class="cialdini-example-label">Praxis-Beispiel</div>
+                <div class="cialdini-example-text">An Tech-Team-Standups teilnehmen, ihre Projekt-Erfolge feiern und <strong>jede L&amp;D-Initiative in den Zielen der Tech-Abteilung rahmen</strong> statt in Human Resources (HR)-Strategie signalisiert: "Wir sind auf eurer Seite."</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cm-mapping">
+          <div class="cm-mapping-title">Wie die 7 Hebel auf eine resistente L&amp;D-Kultur mappen</div>
+          <div class="cm-mapping-row">
+            <div class="cm-mapping-header">Hebel</div>
+            <div class="cm-mapping-header">Relevanz f&#252;r Tech-Abteilung</div>
+            <div class="cm-mapping-header">Taktischer Schritt</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Social Proof</div>
+            <div class="cm-relevance">Hoch &#8212; Expertenkultur folgt Peers</div>
+            <div class="cm-tactic">In Pilot-Team-Erfolg investieren</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Reziprozit&#228;t</div>
+            <div class="cm-relevance">Hoch &#8212; Abteilung f&#252;hlt sich von L&amp;D &#252;bersehen</div>
+            <div class="cm-tactic">Zuh&#246;ren vor dem Designen</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Autorit&#228;t</div>
+            <div class="cm-relevance">Mittel &#8212; muss erst verdient werden</div>
+            <div class="cm-tactic">Forschung referenzieren, nicht Meinungen</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Sympathie</div>
+            <div class="cm-relevance">Hoch &#8212; Widerstand ist pers&#246;nlich</div>
+            <div class="cm-tactic">Beziehungen aufbauen vor Programmen</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Knappheit</div>
+            <div class="cm-relevance">Mittel &#8212; vorsichtig einsetzen</div>
+            <div class="cm-tactic">Pilot als selektiv rahmen, nicht verpflichtend</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Commitment</div>
+            <div class="cm-relevance">Hoch &#8212; resistente Kultur braucht kleine Jas</div>
+            <div class="cm-tactic">Mit Mikro-Agreements starten</div>
+          </div>
+          <div class="cm-mapping-row">
+            <div class="cm-lever">Unity</div>
+            <div class="cm-relevance">H&#246;chste &#8212; die &#252;bergeordnete Strategie</div>
+            <div class="cm-tactic">In ihre Welt einbetten, nicht besuchen</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="showPage('assessment')">&#8592; Assessment Center</button>
+        <button class="nav-btn next" onclick="showPage('research')"><div><span class="nav-btn-label">Weiter</span><span class="nav-btn-title">Research &amp; Neuro &#8594;</span></div></button>
+      </div>
+    </div>`,
+
   assessment: () => `
     <div class="page">
       <div class="content-header">
@@ -5244,7 +5888,7 @@ const pages = {
     </div>`
 };
 
-const stepOrder = ['overview','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','p1','p2','bestpractice','p3','p4','p5','usecases','decisiontree','methoden','assessment','research','glossar','resources'];
+const stepOrder = ['overview','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','p1','p2','bestpractice','p3','p4','p5','usecases','decisiontree','methoden','assessment','change','research','glossar','resources'];
 const stepPhases = {s1:'p1',s2:'p1',s3:'p1',s4:'p1',s5:'p2',s6:'p2',s7:'p2',s8:'p2',s9:'p3',s10:'p3',s11:'p3',s12:'p3'};
 
 const dtScenarios = {
@@ -5650,6 +6294,12 @@ function toggleSub(card) {
     detail.classList.add('open');
     card.classList.add('expanded');
   }
+}
+
+function toggleCialdini(tile) {
+  var isOpen = tile.classList.contains('open');
+  tile.closest('.cialdini-grid').querySelectorAll('.cialdini-tile.open').forEach(function(t) { t.classList.remove('open'); });
+  if(!isOpen) tile.classList.add('open');
 }
 
 function toggleAC(block) {
@@ -6109,7 +6759,7 @@ var pageTitles_de = {
   s12: 'Lernkultur', p1: 'Programme & Trainings', p2: 'Coaching & Workshops', bestpractice: 'Best Practices',
   p3: 'eLearning & Learning Management System (LMS)', p4: 'Live Trainings', p5: 'Compliance & Projektmanagement (PM)',
   usecases: 'Use Cases', decisiontree: 'Decision Tree',
-  research: 'Research & Neuro', methoden: 'Lernmethoden', assessment: 'Assessment Center', glossar: 'Glossar', resources: 'Quellen'
+  research: 'Research & Neuro', methoden: 'Lernmethoden', assessment: 'Assessment Center', change: 'Change Management', glossar: 'Glossar', resources: 'Quellen'
 };
 var pageTitles = pageTitles_de;
 
