@@ -8,7 +8,7 @@ Ein interaktives, mobil-optimiertes Referenz-Tool für Learning & Development �
 
 ## Was ist der L&D Navigator?
 
-Der L&D Navigator ist eine Single-Page-Anwendung (kein Framework, kein Backend, kein Login) die als persönliches Referenz- und Lerntool für L&D-Praktiker:innen entwickelt wurde. Die gesamte Anwendung besteht aus einer einzigen `index.html` Datei.
+Der L&D Navigator ist eine Single-Page-Anwendung die als persönliches Referenz- und Lerntool für L&D-Praktiker:innen entwickelt wurde. Die gesamte Anwendung besteht aus einer einzigen `index.html` Datei.
 
 **Kernidee:** Alle wichtigen Frameworks, Modelle, Checklisten und Best Practices aus dem L&D-Bereich — an einem Ort, jederzeit auf dem Handy verfügbar.
 
